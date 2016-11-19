@@ -1,0 +1,8 @@
+###Distributed Topology Construction of Bluetooth Wireless Personal Area Networks (https://pdfs.semanticscholar.org/1e45/1c35db078fba05cc9b6daf8c21592f98c388.pdf) 
+
+Introduction:
+An ad hoc network is a wireless network formed by nodes that cooperate with each other to forward packets in the network.
+Bluetooth is a promising technology that aims to support wireless connectivity among cell phones, headsets, PDAs, digital cameras, and laptop computers.
+This is a valid assumption for Wireless Personal Area Networks (WPANs), currently considered by the IEEE 802.15 standard [16]. 
+Compared to other forms of ad hoc networks, such as Mobile Ad Hoc Networks (MANETs) or sensor networks, WPANs are characterized by a relatively small number of low-power devices operating within a limited geographic area (e.g. a conference room). In addition to connectivity, WPAN applications require scatternet formation in a short amount of time that is tolerable by a human user.
+

@@ -1,0 +1,8 @@
+###WLAN and WPAN Coexistence in UL Band (https://pdfs.semanticscholar.org/144b/6d5e321a7257eb1e100ed99f1fb4c9ba2efe.pdf)
+
+Abstract:
+Wireless local- and personal-area networks provide complimentary services in the same unlicensed (UL) radio frequency band of operation.
+
+Introduction:
+As unlicensed (UL) band utilization for daily office functions increases, it becomes important to understand how different wireless services, operating in the same band, may affect each other.
+Both BT wireless personal-area networks (WPANs) and 802.11 wireless local-area networks (WLANs) share the same 2.4-GHz UL frequency band and provide complimentary wireless solutions for connectivity. This complimentary nature of the services could enhance the use of both protocols at the same physical location and provide an incentive for their adoption. However, the issues surrounding their coexistence need to be addressed before the interoperability problems, whether speculative or actual, become a deterrent to their commercial acceptance.

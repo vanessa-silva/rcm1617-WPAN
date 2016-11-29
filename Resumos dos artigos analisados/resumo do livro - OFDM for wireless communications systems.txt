@@ -1,0 +1,74 @@
+### WPANs
+
+Introduction: 
+
+Besides the WLANs, the WPANs like Bluetooth, HIPERPAN, and IEEE 802.15 have been standardized. These technologies will be used for short distance (~10m) communications with low data rates for different QoS.
+A WPAN is a networked collection of devices situated within a short range (10 meters is often a reference radius) [1–118].
+The attribute “personal” stems from the fact that this collection of devices presumably belongs to an individual, forming his or her WPAN. Thus, the WPAN forms a wireless “bubble” around the person, referred to as the personal operating space (POS). 
+Besides the connection among the personal devices that form the bubble, the WPAN should provide the user with a seamless, ad hoc connection to the compatible resources and APs that enter her POS. 
+The WPAN bubble can expand and contract dynamically, depending on need; it may connect to the wall repeaters to access to the Internet or it can be dynamically stretched to include access to sensors and actuators.
+
+The main design objectives of WPAN technology are low power consumption, operation in the unlicensed spectrum, low cost, and small package size. 
+Low power consumption is a critical issue since the rate at which battery performance improves is fairly slow, compared to the explosive overall growth in wireless communications. 
+The WPAN systems use license-free wireless links because this is the only way to achieve ubiquitous connectivity without adverse impact on an existing wireless infrastructure.
+
+
+Emergence of Personal Area Networking (The Person-Centered Concept):
+
+The main goal of a PAN is, again, the networking of proximate devices, but it does not necessarily use the wireless medium. 
+Instead, it may use the electric field with a human body as a conductor, magnetic field, and so forth. 
+
+[Zimmermann’s work on PAN: Zimmerman [19] introduced the term PAN to denote a communication between proximal electronic devices by using the body as a conduit for information. This “body network” has been conceived as a support to the intelligent environment that the person “carries” herself. The motivation for such a network comes from the fact that there is a need for data exchange not only across large distances (which is conventionally referred to as communications), but also between people who are at a “conversational” distance.]
+
+
+Emergence of the Person-Centered Concept:
+
+While the traditional communications paradigm aims to establish the communication link between devices, the focus now shifts to communication among persons and functional/data resources (here, the term person refers to all personal communication-enabled devices).
+The addresses of sources/destinations in communication links are determined either by the person who owns them, the service they are able to offer, or the resource’s contents. This causes radical changes in design, for example, in addressing (content-based or capability-based), security, and so forth.
+Examples are service portability and virtual home environments [21], concepts aimed at providing users with the same service experience independently of user interfaces, terminal capabilities, access network technologies, and network and service providers.
+
+
+WPAN e o conceito centrado na pessoa:
+
+A fundamental concept behind WPAN systems asserts that any time two WPAN-equipped devices get within (approximately) 10m of one another, they can form a spontaneous, just-in-time, disposable connection. 
+
+Initially, WPAN technology offered an efficient cable replacement, easing the interconnection of communications, computing, and/or information storage devices. 
+[The ad hoc connectivity brought by the WPANs can motivate the design of the computing devices themselves, as well as the distribution of the computing tasks and capabilities over different devices.]
+
+The POS, introduced by the WPAN, is a new concept in communications. The POS is tethered to an individual, moving along with him or her and enabling his or her personal devices to communicate in an ad hoc manner.
+It further allows the individual to communicate with other devices whose communication range intersects with his or her POS. 
+Thus, the WPAN concept shifts the well-established communication paradigm. The POS plays the role of the universal access interface to the networked user.
+
+
+Technical Challenges of a WPAN Technology:
+
+WPAN should support the following two (interrelated) operations: Devices should be able to discover the service or information resource needed and to establish an ad hoc connection to the device that offers that service or contains that resource. 
+Thus, ad hoc connectivity can be regarded as a generic capability and service discovery and selection as a generic application of personal area networking.
+Thus, for example, the procedure for gaining awareness of a proximate computing entity can be decomposed into ad hoc connection establishment and service discovery.
+
+
+Ad Hoc Connectivity:
+
+Ad hoc connectivity refers to the capability of devices to establish mutual, ondemand, timely peer communication wireless links where an ad hoc communication network is created with little, if any, reconfiguration. 
+[This means that there is no fixed infrastructure to support network initiation, there is no central controller for the units to rely on for making interconnections, and there is no support for coordination of communications. ]
+The ad hoc network exists for and due to the cooperative functioning of the constituent wireless nodes.
+
+[ The need for new routing approaches becomes immediately obvious in ad hoc networking because in truly ad hoc systems, there is no difference between radio units; that is, there are no distinctive base stations or terminals.
+ Stated in terms of routing, the whole network is based on the idea that devices serve both as routers and hosts at the same time.
+ Due to the dynamic and volatile nature of the topology defined by such nodes, the routing algorithms directly handle the mobility.]
+
+[Security issues in ad hoc networking are discussed in [11, 12]. The main security problem is to create trusted relationships between the cryptographic public keys without the aid of a trusted third-party certification. In addition, there are other security issues specific to ad hoc networking, for example, the “battery exhaustion attack” as a special form of denial of service attack.]
+
+The PAN technology, especially Bluetooth, is probably the first commercial real-world network where ad hoc networking concepts fit very well and could help to create robust and flexible network connectivity.
+
+
+Service Discovery and Resource Selection:
+
+Service discovery is in fact a part of distributed computing. 
+In its simplest variant, the service discovery enables a computing device to have access to the service that is available within its communication range.
+For example, a PDA finds a printer within its proximity, recognizes it as an available computer resource (provided that certain security conditions are satisfied), and uses it as if the printer were installed in the PDA’s software.
+Generally stated, service discovery refers to the process of establishing an on-demand connection at higher protocol stack levels (ultimately with seamless connection at the application level) with hardware that is physically available.
+With service discovery, devices may automatically discover network services including their properties, and services may advertise their existence in a dynamic way.
+
+
+Enabling Technologies: (pag.57)

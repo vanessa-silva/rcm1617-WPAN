@@ -71,4 +71,85 @@ Generally stated, service discovery refers to the process of establishing an on-
 With service discovery, devices may automatically discover network services including their properties, and services may advertise their existence in a dynamic way.
 
 
-Enabling Technologies: (pag.57)
+Enabling Technologies:
+
+There are several competing technologies or standards that provide wireless connectivity within a short range. The most notable among them are Bluetooth, IrDA, HomeRF, and WLAN. 
+Although each has targeted slightly different applications and usage models, the premise behind all of these standards is to use some kind of underlying radio technology to enable the wireless transmission of data and to provide support for the formation of networks and managing various devices by means of high-level software.
+
+Bluetooth: Bluetooth is a high-speed, low-power microwave wireless link technology designed to connect phones, laptops, PDAs and other portable equipment with little or no work on the part of the user. 
+Bluetooth does not require LOS positioning of connected units. 
+Whenever Bluetooth-enabled devices come within range of each other, they instantly transfer address information and establish small networks between themselves without user involvement.
+To a large extent, Bluetooth has motivated the present WPAN attempts and conceptualizations; moreover, it constitutes the substance of the IEEE 802.15.1. WPAN standard.
+
+IEEE 802.15 WPAN: The 802.15 WPAN effort focuses on the development of consensus standards for PANs or short-distance wireless networks. 
+These WPANs address wireless networks of portable and mobile computing devices such as PCs, PDAs, peripherals, cell phones, pagers, and consumer electronics, allowing these devices to communicate and interoperate with one another. 
+
+Namely, all short-range wireless technologies fall into two broad, overlapping categories [17]: PANs and LANs.
+
+WPAN technologies emphasize low cost and low power consumption, usually at the expense of range and peak speed.
+
+WPAN
+• Personalization
+• Lower cost and power
+• Smaller coverage
+• 1–10 Mbps peak data rate
+
+
+Ongoing Research:
+
+Architecture and Middleware Issues:
+
+WPANs allow proximal devices to share information and resources.
+The mobile nature of these devices places unique requirements on WPANs, such as low power consumption, frequent make-and-break connections, resource discovery and utilization, and international regulations.
+
+WPAN systems have evolved from “cord” replacement technologies. Some examples are as follows:
+Cordless communication between your keyboard and computer;
+Cordless communication between your personal productivity device or PDA and your computer;
+Cordless communication within your home between your cell phone and your home phone.
+
+
+Current WPAN Architectural Models:
+
+The availability of low-cost, low-power, short-range international 2.4-GHz digital radios will provide the required communication technology for WPAN. 
+Convergence of the competing radio standards would allow for a seamless connection among the digital wireless devices in our homes, offices, and environment. 
+
+A WPAN, however, is inwardly looking:
+• Interaction with personal objects;
+• Network time frame seconds to hours;
+• Highly mobile devices;
+• “Wires get in the way.”
+
+A WPAN Architectural Model Based on Bluetooth Technology
+A Bluetooth configuration has the following characteristics and components (see Figure 3.6):
+• It operates in the 2.4-GHz band at a data rate of 720 Kbps.
+• It uses FHSS, which divides the frequency band into a number of channels (2.402–2.480 GHz, yielding 79 channels).
+• Radio transceivers hop from one channel to another in a pseudorandom fashion determined by the master.
+• It supports up to eight devices in a piconet (one master and seven slaves).
+• Piconets can combine to form scatternets.
+
+A piconet comprises the following:
+• A number of devices are connected in an ad hoc fashion.
+• One unit will act as a master and the others as slaves for the duration of the piconet connection.
+• The master sets the clock and hopping pattern.
+• Each piconet has a unique hopping pattern or ID.
+• Each master can connect to 7 simultaneous or 200+ inactive (parked) slaves per piconet.
+
+A scatternet has the following characteristics (see Figure 3.7):
+• A scatternet is the linking of multiple colocated piconets through the sharing of common master or slave devices.
+• A device can be both a master and a slave.
+• Radios are symmetric (the same radio can be a master or slave).
+• In a high-capacity system, each piconet has maximum capacity (720 Kbps).
+
+In Figure 3.7 two interconnected piconets form a scatternet. They are able to operate within the vicinity of each other because they are using different hopping sequences, reducing mutual interference to an acceptable level.
+In this way it is possible to have several small groups of Bluetooth devices communicating with each other in the same area, which is particularly useful, for example, at a conference where individuals may be comparing notes while the main discussion points are being broadcast to all. 
+Bluetooth devices that are not currently part of a piconet are constantly “listening” for other Bluetooth devices, and when they are close enough to become part of a piconet, they identify themselves so that other devices can communicate with them if required.
+An example would be a Bluetooth-equipped printer and notebook PC. When the PC comes into range of the printer (arriving at the office, for example), the printer makes itself known to the PC so that when the user wishes to print a document, the two devices can immediately begin the data transfer. Meanwhile other PCs will have joined the piconet so that they too can use the printer when required.
+
+
+Figure 3.8 depicts an independent short-range radio system sample configuration. We can see that various kinds of devices can participate in such a configuration if they are supplied with the appropriate interfaces.
+
+This model accomplishes a peer-to-peer communication with the following characteristics:
+• Cohabitation of multiple networks (20 or more);
+• Up to 10 devices in a single WPAN;
+
+In general an AP is a device that allows wireless-equipped devices to connect to a wired network.

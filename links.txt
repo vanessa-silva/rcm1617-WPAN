@@ -1,3 +1,5 @@
+Artigos:
+
 https://pdfs.semanticscholar.org/1e45/1c35db078fba05cc9b6daf8c21592f98c388.pdf
 https://pdfs.semanticscholar.org/144b/6d5e321a7257eb1e100ed99f1fb4c9ba2efe.pdf
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.3239&rep=rep1&type=pdf
@@ -8,3 +10,17 @@ https://pdfs.semanticscholar.org/9cb6/f266065d43316fe4f4053d764b47345b0d97.pdf
 http://highfrequencyelectronics.com/Sep03/HFE0903_TechReport.pdf
 http://www.tlc-networks.polito.it/oldsite/carla/papers/infocom02_bt.pdf
 https://www.rfc-editor.org/rfc/pdfrfc/rfc4919.txt.pdf
+http://www.ieee802.org/15/pub/PR/ACM_MC2R-80215.pdf
+https://docente.ifrn.edu.br/ricardogalvao/disciplinas/2016.1/tec.sis.5m-redes-sem-fio/.-padrao-ieee-802.15.1-bluetooth-slides
+http://ws680.nist.gov/publication/get_pdf.cfm?pub_id=906075
+http://ijsetr.com/uploads/146523IJSETR2448-1001.pdf
+
+
+Sites:
+
+http://br.ccm.net/contents/822-wpan-redes-pessoais-sem-fios
+http://www.teleco.com.br/tutoriais/tutorialredesemfio1/pagina_2.asp
+https://www.tecmundo.com.br/bluetooth/11029-tecnologias-promissoras-pan-rede-sem-fio-de-area-pessoal.htm
+http://etutorials.org/Mobile+devices/mobile+wireless+design/Part+One+Introduction+to+the+Mobile+and+Wireless+Landscape/Chapter+3+Wireless+Networks/Wireless+Personal+Area+Networks+WPANs/
+https://www.youtube.com/watch?v=IKAhKJjoa8w
+http://pt.slideshare.net/DilumBandara/wireless-personal-area-networks

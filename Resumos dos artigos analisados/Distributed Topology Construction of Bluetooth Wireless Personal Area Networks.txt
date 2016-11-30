@@ -1,8 +1,79 @@
 ###Distributed Topology Construction of Bluetooth Wireless Personal Area Networks (https://pdfs.semanticscholar.org/1e45/1c35db078fba05cc9b6daf8c21592f98c388.pdf) 
 
+Abstract:
+Bluetooth, a wireless technology based on a frequency hopping physical layer, enables portable devices to form short-range wireless ad hoc networks. 
+Thus, even if all nodes are within proximity of each other, only those nodes which are synchronized with the transmitter can hear the transmission.
+
+
 Introduction:
 An ad hoc network is a wireless network formed by nodes that cooperate with each other to forward packets in the network.
+We aim to address a problem that arises when multiple channels are available for communication in an ad hoc network. The problem is determining which subgroup of nodes should share a common channel and which nodes should act as relays, forwarding traf?c from one channel to another. 
+
+We address an instance of the above problem which occurs in Bluetooth-based ad hoc networks, known as scatternets. 
 Bluetooth is a promising technology that aims to support wireless connectivity among cell phones, headsets, PDAs, digital cameras, and laptop computers.
+
+Bluetooth is a frequency hopping system which de?nes multiple channels for communication (each channel de?ned by a different frequency hopping sequence).
+A group of devices sharing a common channel is called a piconet. Each piconet has a master unit which selects a frequency hopping sequence for the piconet and controls access to the channel. Other participants of the group, known as slave units, are synchronized to the hopping sequence of the piconet master. [Within a piconet, the channel is shared using a slotted Time Division Duplex (TDD) protocol where a master uses a polling protocol to allocate timeslots to slave nodes.]
+
+Piconets can also be interconnected via bridge nodes to form a larger ad hoc network known as a scatternet.
+Bridge nodes are capable of timesharing between multiple piconets, receiving data from one piconet and forwarding it to another. There is no restriction on the role a bridge node can play in each piconet it participates in. A bridge can be a master in one piconet and slave in others (M/S bridge) or a slave in multiple piconets (S/S bridge).
+
+In Figure 1(b) all nodes are part of a single piconet. Figure 1(c) illustrates another con?guration where node A is master of piconet 1, node E is master of piconet 3, node B is an M/S bridge (master of piconet 2 and a slave of piconet 1), node D is a slave of piconet 1 and node C is an S/S bridge (slave in piconets 2 and 3). 
+[In contrast to these scatternet con?gurations the node interconnection topology in a single channel system will be a complete graph (Fig. 1(a)) since all nodes will hear each other’s transmissions.]
+
+[The Bluetooth setting introduces two unique challenges: ?rst, no broadcast channel exists for facilitating the exchange of any control information, including proximity information; second, even if proximity information is available, the piconet membership constraint renders the formation of a connected topology a very challenging task.]
+
+We then propose the Bluetooth Topology Construction Protocol (BTCP), an asynchronous distributed protocol that extends the point-to-point symmetric mechanism to the case of several nodes. 
+BTCP is based on a distributed leader election process where proximity information is discovered in a progressive manner and eventually accumulated to an elected coordinator node. Given a view of the topology, the coordinator can then use a centralized algorithm to form a connected scatternet topology. 
+
+WPAN applications require scatternet formation in a short amount of time that is tolerable by a human user. 
+
 This is a valid assumption for Wireless Personal Area Networks (WPANs), currently considered by the IEEE 802.15 standard [16]. 
 Compared to other forms of ad hoc networks, such as Mobile Ad Hoc Networks (MANETs) or sensor networks, WPANs are characterized by a relatively small number of low-power devices operating within a limited geographic area (e.g. a conference room). In addition to connectivity, WPAN applications require scatternet formation in a short amount of time that is tolerable by a human user.
 
+
+LINK ESTABLISHMENT IN BLUETOOTH:
+
+Bluetooth link establishment is a two-step process that involves the Inquiry and Paging procedures [17].
+Both procedures are asymmetric, involving two types of nodes that perform different actions: during Inquiry, senders discover and collect neighborhood information provided by receivers; during Paging, senders connect to previously discovered receivers. 
+
+The functional difference between the two procedures is that Inquiry uses a universal frequency hopping sequence while Paging uses a common point-to-point frequency hopping sequence. 
+Using a universal frequency hopping sequence, a sender node effectively broadcasts an Inquiry Access Code (IAC) packet that can be heard by receiver nodes listening for such a packet. 
+During the paging procedure, a sender uses a receiver’s page hopping sequence and effectively unicasts a Device Access Code (DAC) packet to be heard only by this receiver. 
+Hence, Inquiry involves many units where a sender can discover more than one receiver while Paging involves only two units where a sender pages and connects to a speci?c receiver.
+
+The Asymmetric Protocol:
+
+The asymmetric Bluetooth link establishment protocol (Fig. 2) begins by the sender entering the INQUIRY state and the receiver entering the INQUIRY SCAN state. 
+After an initial FS delay, the sender transmits on the frequency hop the receiver is listening to. 
+Upon reception of the IAC packet, the receiver sleeps for a random time interval (called RB delay), uniformly distributed between 0 and rmax(= 639.375ms). 
+The random back-off is performed to avoid collision at the sender in case two or more receivers were listening on the same frequency hop and responded simultaneously. 
+
+When the receiver wakes up, it tunes to the hop it was listening before the back-off occurred. 
+When the receiver wakes up, it tunes to the hop it was listening before the back-off occurred. After a second FS delay, an IAC packet is received; the receiver replies with an FHS packet and starts listening on its page hopping sequence by entering the PAGE SCAN state.
+The FHS packet contains the identity and clock of the receiver. Upon reception of the FHS packet, the sender initiates the Paging procedure by entering the PAGE state. 
+The identity and clock in the FHS packet are used to determine the receiver’s page hopping sequence and current listening hop, respectively. Thus, when paging follows inquiry, the FS delay is eliminated and the sender transmits a DAC packet on the receiver’s listening hop.
+
+The remaining control messages are exchanged in consecutive slots.
+The receiver replies with a DAC packet. 
+The sender transmits a FHS packet to let the receiver determine its channel hopping sequence and phase.
+As soon as the sender receives the DAC acknowledgment, it becomes the link master. 
+The receiver acknowledges with another DAC packet and becomes the link slave. 
+After an additional POLL/NULL packet exchange, the synchronized nodes may start exchanging data.
+
+
+A SYMMETRIC LINK ESTABLISHMENT PROTOCOL:
+
+Links can be automatically established using the following symmetric mechanism: When a node is powered on, it arbitrarily assumes sender or receiver role by entering the INQUIRY or INQUIRY SCAN state, respectively.
+The node remains in the selected state for a period of of time. If during this time no connection is established, it switches to the opposite state. State alteration continues until a connection occurs. 
+
+Nodes execute the protocol independently; they will be able to connect only during intervals where they are in opposite states.
+During such an interval, the asymmetric protocol is automatically executed. 
+The sender will become aware of the receiver only when it receives the FHS packet after a random delay R.
+If during this time the sender independently switches to the receiver state, connection will not occur. 
+On the receiver end, the reception of the IAC packets, back-off activity and transmission of FHS packets are not communicated to the upper layers of the Bluetooth stack. 
+Since we can only have explicit control at the upper layers and since we need to devise a symmetric protocol without modifying the Bluetooth Speci?cation, we assume that the receiver becomes aware of the sender only after paging and link establishment. 
+...
+
+
+SCATTERNET FORMATION:

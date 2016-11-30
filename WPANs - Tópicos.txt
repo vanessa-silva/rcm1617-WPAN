@@ -1,0 +1,13 @@
+Abstract
+Introdução
+Definição
+Objetivos
+Evolução
+Funcionamento
+Desafios
+Tecnologias associadas
+Estado atual
+? Vantagens/desvantagens
+Modelos de arquitetura/standards (IrDA-infravermelhos, Bluetooth, IEEE 802.15-zigbee, HomeRF, UWB-banda ultra larga)
+Configuração
+Conclusão/futuro

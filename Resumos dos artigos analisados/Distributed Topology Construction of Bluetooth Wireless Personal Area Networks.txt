@@ -77,3 +77,64 @@ Since we can only have explicit control at the upper layers and since we need to
 
 
 SCATTERNET FORMATION:
+
+Suppose that several users wish to form an ad hoc network using their Bluetooth devices. 
+Each user powers on his/her device and expects to see a ”network established” message after a short period of time. 
+After this message appears, the user will be able to exchange information with every other user. 
+The high-level description of this application, embodies the elements of a successful scatternet formation protocol: 
+- Network establishment must be performed in a distributed manner. Each device must start operating asynchronously on its own without any prior knowledge of the identities or number of nodes participating in the process.
+- Network establishment delay must be tolerable by the end-user and minimized as much as possible.
+- Upon completion, the protocol must yield a connected scatternet [that satis?es the Bluetooth degree constraint of 7 slaves per piconet].
+
+
+THE BLUETOOTH TOPOLOGY CONSTRUCTION PROTOCOL (BTCP):
+
+BTCP is based on a leader election process. 
+Since the nodes start asynchronously and without any knowledge of the number of participating nodes, an elected coordinator will be able to control the process and ensure that the resulting topology will satisfy the scatternet formation criteria.
+The protocol consists of 3 phases:
+
+Phase I: Coordinator Election :
+Phase I consists of an asynchronous distributed election of a coordinator node that will eventually know the count, identities and clocks of all nodes participating in the topology construction process. 
+Each node has an integer variable called VOTES. Upon power-on, a node initializes VOTES to 1, and starts executing the symmetric link establishment protocol using a randomized schedule. 
+
+Any two nodes that discover each other and connect enter a one-on-one confrontation by comparing their VOTES. The node with the larger VOTES wins the confrontation. If the VOTES are equal, the winner is the node with the larger Bluetooth address.
+The loser provides the winner with all the FHS packets (i.e. identities and clocks) of the nodes it has won thus far.
+[Then, it disconnects and enters the PAGE SCAN state. In this way, it will hear only page messages from nodes that will page it in the future. This action eliminates the loser from the leader election and prepares it for the next phases of the protocol. ]
+Upon receiving the FHS packets, the winner increases its VOTES by the loser VOTES and continues participating in the leader election by resuming execution of the symmetric protocol. 
+The rest of the nodes are in the PAGE SCAN state, waiting to be paged by a node that has information about them.
+
+Phase II: Role Determination:
+After the election of Phase I, the coordinator has acquired the identities and clocks of all nodes participating in scatternet formation. 
+The coordinator initiates Phase II by checking if the number of nodes N is less than8. If this is the case, it pages and connects to all other nodes that are waiting in PAGE SCAN; a single piconet is formed with the coordinator as master and the rest of the nodes as slaves.
+If N = 8, several piconets must be formed and interconnected via bridge nodes. Given the global view of the network, the coordinator can decide on the role each node will perform in the ?nal scatternet. Node-speci?c scatternet formation criteria can be communicated to the coordinator during the election process as well as the FHS information.
+In absence of speci?c requirements, use the one default criteria.
+Next, the coordinator pages and connects to the nodes it selected as masters. 
+A temporary piconet is formed with the coordinator as master and the designated masters as slaves. 
+The coordinator transmits to each designated master its connectivity list set and instructs the designated masters to start phase III; then it disconnects the temporary piconet and starts phase III as a master.
+
+Phase III: Connection Establishment :
+Phase III is initiated by the designated masters (including the coordinator). Each master pages and connects to the slaves and bridges provided in its SLAVESLIST and BRIDGELIST, respectively. 
+As soon as a node is noti?ed by its master that it is a bridge, it waits to be paged by its second master
+When this happens, the bridge node sends a CONNECTED noti?cation to its masters.
+When a master receives a CONNECTED noti?cation from all its assigned bridges, a fully connected scatternet of P piconets is guaranteed to be formed and the protocol terminates.
+
+Leader election termination :
+
+[Ideally, election should stop as soon as the coordinator is elected. However, since a node is not aware of the total number of participants, it will never know whether or not it is the winner of the election. Each node maintains a ”state alteration” timeout variable called ALT TIMEOUT. ALT TIMEOUT is set upon power-on and reset each time the node wins a confrontation and restarts the symmetric link establishment protocol. When ALT TIMEOUT expires, the node assumes it is the elected coordinator. ]
+
+It is important to determine an appropriate value for ALT TIMEOUT. A very large value will result in a node having won the competition and continuing alternating without knowing it is the only one left.
+Using a very short ALT TIMEOUT, several nodes may assume the role of coordinator; this will result in a disconnected scatternet.
+The delay analysis of the two-node symmetric link establishment protocol can be used to provide a tight estimate for ALT TIMEOUT.
+
+(ver figura 6)
+
+
+RELATED WORK:
+
+O BTCP é distribuído e assíncrono; Fornece também mais flexibilidade na formação da topologia WPAN final devido à sua fase centralizada de atribuição de funções.
+
+
+CONCLUSIONS AND DISCUSSION:
+
+In ad hoc networks using frequency hopping technology, nodes can be grouped in multiple communication channels. 
+

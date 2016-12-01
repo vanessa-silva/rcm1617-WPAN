@@ -1,0 +1,52 @@
+#### IEEE 802.15.4 Low Rate –Wireless Personal Area Network Coexistence Issues (http://morse.colorado.edu/~tlen5520/Papers/802154WiFi.pdf)
+
+
+Abstract:
+
+IEEE 802.15.4 is a proposed standard addressing the needs of low-rate wireless personal area networks or LR-WPAN with a focus on enabling wireless sensor networks. 
+The standard is characterized by maintaining a high level of simplicity, allowing for low cost and low power implementations.  
+Its operational frequency band includes the 2.4GHz industrial, scientific and medical band providing nearly worldwide availability; additionally, this band is also used by other IEEE 802 wireless standards. 
+
+
+INTRODUCTION:
+
+Fuelled by the need to enable inexpensive wireless sensor network applications, in December 2000 Task Group 4, under the IEEE 802 Working Group 15, was formed to begin the development of a LRWPAN standard IEEE 802.15.4. 
+The goal of Task Group 4 is to provide a standard which has the characteristics of ultra-low complexity, low-cost and extremely low-power for wireless connectivity among inexpensive, fixed, portable and moving devices [1]. 
+
+The IEEE 802.15.4 devices are proposed to operate in the 2.4 GHz industrial, scientific and medical (ISM) band. The same operational band used by other IEEE 802 wireless devices, such as IEEE 802.11b (WLAN) and IEEE 802.15.1 (Bluetooth).  
+
+
+TECHNICAL OVERVIEW:
+
+A summary of the high-level features of the IEEE 802.15.4 is shown in Table 1. 
+
+By favoring low-cost and low-power, IEEE 802.15.4 is enabling applications in the fields of industrial, agricultural, vehicular, residential and medical sensors and actuators.
+
+The intent of IEEE 802.15.4 is to address applications where existing WPAN solutions are too expensive and the performance of a technology such as BluetoothTM is not required. 
+IEEE 802.15.4 LR-WPANs complement other WPAN technologies by providing very low power consumption capabilities at very low cost, thus enabling applications that were previously impractical. 
+Table 2 illustrates a basic comparison between IEEE 802.15.4 and other IEEE 802 wireless networking standards. 
+
+The IEEE 802.15.4 standard is being designed to be used in a wide variety of applications which require simple wireless communications over short-range distances with limited power and relaxed throughput needs.
+
+
+LR-WPAN Design :
+
+A main design consideration for LR-WPANs is low power consumption, thereby maximizing battery life. 
+To achieve low average power consumption, IEEE 802.15.4 assumes that the amount of data transmitted is short and that it is transmitted infrequently in order to keep a low duty-cycle.
+
+The standard allows the formation of two possible network topologies: the star topology or the peer-to-peer topology, Figure 1.
+In the star topology, the communication is performed between network devices and a single central controller, called the PAN coordinator. The PAN coordinator is in charge of managing all the star PAN functionality. 
+In the peer-to-peer topology, every network device can communicate with any other within its range.  This topology also contains a PAN coordinator, which acts as the root of the network. Peer-to-peer topology allows more complex network formations to be implemented; e.g. ad hoc and self-configuring networks. 
+
+An IEEE 802.15.4 LR-WPAN device is composed of a physical (PHY) layer and a medium access control (MAC) sublayer that provides access to the physical channel for all types of transfer and ensures the reliable transfer of frames.  
+
+
+PHY Layer:
+
+IEEE 802.15.4 was designed to support two PHY options based on direct sequence spread spectrum (DSSS).
+The primary difference  between the two PHYs is the frequency band. [The 868/915 MHz PHY (also called low-band) is specified for operation in the 868 MHz band in Europe offering one channel with a raw data rate of 20 kb/s and the 915 MHz ISM band in North America offering 10 channels with a raw data rate of 40 kb/s. The low-band uses binary phase shift key (BPSK) modulation.]
+The 2.4 GHz PHY (also called high-band) specifies operation in the 2.4 GHz ISM band, with nearly worldwide availability. [ This band spans from 2.4 to 2.483 GHz and offers 16 channels with channel spacing of 5 MHz, operating with a raw data rate of 250 kb/s using offset quadrature phase shift key (O-QPSK) modulation. ]
+
+
+MAC sublayer:
+The IEEE 802 project divides the data link layer (DLL) in to two sublayers, the MAC and logical link control (LLC) sublayers.

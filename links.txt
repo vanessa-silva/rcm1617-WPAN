@@ -17,7 +17,6 @@ http://ijsetr.com/uploads/146523IJSETR2448-1001.pdf
 
 Sites:
 
-http://br.ccm.net/contents/822-wpan-redes-pessoais-sem-fios
 http://www.teleco.com.br/tutoriais/tutorialredesemfio1/pagina_2.asp
 https://www.tecmundo.com.br/bluetooth/11029-tecnologias-promissoras-pan-rede-sem-fio-de-area-pessoal.htm
 http://etutorials.org/Mobile+devices/mobile+wireless+design/Part+One+Introduction+to+the+Mobile+and+Wireless+Landscape/Chapter+3+Wireless+Networks/Wireless+Personal+Area+Networks+WPANs/

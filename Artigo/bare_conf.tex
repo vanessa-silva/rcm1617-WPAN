@@ -53,19 +53,19 @@ Introdução aqui.
 
 \subsection{Conceito}
 
-Uma \textit{Wireless Personal Area Network} (WPAN) é uma rede de área pessoal (\textit{Personal Area Network (PAN)}) que permite conectar dispositivos centrados na área (curta) de uma pessoa, com base em conexões sem fio (wireless). Deste modo, WPAN forma uma "bolha" wireless em torno de uma pessoa, conhecida como \textit{Personal Operating Space} (POS) \cite{prasad2004ofdm}, e essa bolha pode, dinamicamente, expandir-se e contrair-se consoante as necessidades.
+Uma \textit{Wireless Personal Area Network} (WPAN) é uma rede de área pessoal (\textit{Personal Area Network} (PAN)) que permite conectar dispositivos, (como PCs, PDAs, telemóveis e impressoras), centrados na área (curta) de uma pessoa, com base em conexões sem fio (\textit{Wireless}). Deste modo, WPAN forma uma "bolha" wireless em torno de uma pessoa, conhecida como \textit{Personal Operating Space} (POS) \cite{prasad2004ofdm}, e essa bolha pode, dinamicamente, expandir-se e contrair-se consoante as necessidades.
 
-Além da conexão entre os dispositivos pessoais, que formam a bolha, WPAN deve fornecer ao utilizador uma conexão \textit{ad hoc} (\ref{redes_ad_hoc}) com os recursos e aplicações compatíveis que entram no seu POS \cite{prasad2004ofdm}.
+Além da conexão entre os dispositivos pessoais, que formam a bolha, WPANs devem fornecer ao utilizador uma conexão \textit{ad hoc} (\ref{redes_ad_hoc}) com os recursos e aplicações compatíveis que entram no seu POS \cite{prasad2004ofdm}.
 Esta permite que os dispositivos pessoas se comuniquem com outros dispositivos em que a faixa de comunicação interceta o seu POS.
 
 O paradigma das comunicações tradicionais destina-se a estabelecer ligações de comunicação entre dispositivos, enquanto que as WPANs destinam-se a estabelecer comunicações entre pessoas, (dispositivos pessoais habilitados para comunicação), e recursos funcionais/dados através de um meio sem fios (substituindo o tradicional "cabo").
 
-
+A tecnologia das \textit{wireless personal area networks} baseiam-se da disponibilidade de rádios digitais internacionais de 2,4 GHz, de baixo custo, de baixo consumo e curto alcance.
 
 
 \subsection{Motivação}
 
-A motivação para tais redes vem da necessidade de troca de dados não só em grandes distâncias (que é tradicionalmente referida como comunicações), mas também entre pessoas que estão em uma "conversação" em uma curta distância, assim como da necessidade dessa troca de dados ser realizada em um meio sem fios.
+A motivação para tais redes vem da necessidade da troca de dados não só em grandes distâncias (que é tradicionalmente referida como comunicações), mas também entre pessoas que estão em uma "conversação" em uma curta distância (normalmente até um limite de 10 metros), assim como da necessidade dessa troca de dados ser realizada em um meio sem fios.
 
 
 \subsection{Objetivos}
@@ -73,10 +73,12 @@ A motivação para tais redes vem da necessidade de troca de dados não só em g
 Os principais objetivos das WPANs são \cite{prasad2004ofdm}:
 
 \begin{itemize}
+
  \item Baixo consumo de energia - problema crítico, dado que a velocidade com que o desempenho da bateria melhora é bastante lenta, em comparação com o explosivo crescimento das comunicações sem fio;
  \item Operação no espectro não licenciado - WPANs usam ligações sem fio não licenciadas, uma vez que esta é a única forma de conseguirem conectividade onipresente sem impacto adverso em uma infraestrutura sem fio existente;
  \item Baixo custo;
  \item Pequeno tamanho de pacote.
+ 
 \end{itemize}
 
 \subsection{Benefícios}
@@ -88,11 +90,33 @@ Os principais objetivos das WPANs são \cite{prasad2004ofdm}:
 
 \subsection{Funcionamento}
 
+Uma WPAN deve suportar as seguintes operações (inter-relacionadas) \cite{prasad2004ofdm}:
+
+\begin{itemize}
+
+ \item Descoberta de serviço, ou seja, os dispositivos devem ter a capacidade de descobrirem o recurso de serviço ou informação necessária;
+ \item Estabelecimento de conexão \textit{ad hoc}, ou seja, os dispositivos devem ter a capacidade de estabelecerem uma conexão \textit{ad hoc} com o dispositivo que oferece esse serviço ou contém esse recurso.
+ 
+\end{itemize}
+
+A descoberta de serviço permite que um dado dispositivo de computação tenha acesso ao serviço que está disponível dentro do seu intervalo de comunicação.
+Por exemplo, um dado PDA, (\textit{Personal Digital Assistants}), encontra uma impressora dentro do seu intervalo de comunicação, reconhece-o, (descoberta de serviço), como um recurso de computador disponível (desde que certas condições de segurança sejam satisfeitas) e usa-o, (estabelecimento de conexão), como se a impressora fosse instalada no seu \textit{software} \cite{prasad2004ofdm}.
+
+\subsection{Redes \textit{Ad Hoc}} \label{redes_ad_hoc}
+
+%Uma conexão \textit{ad hoc} refere-se à capacidade dos dispositivos estabelecerem comunicações mútuas de comunicação [?] entre pares, em tempo real, onde uma rede de comunicação \textit{ad hoc} é criada com pouca reconfiguração, se houver \cite{prasad2004ofdm}. MELHORAR COM MAIS INFORMAÇÃO
+%Isto significa que não existe uma infra-estrutura fixa para suportar a iniciação da rede, não existe um controlador central para as unidades dependerem fazerem interconexões e não há suporte para a coordenação de comunicações \cite{prasad2004ofdm}. 
+%Em termos de roteamento, toda a rede é baseada na idéia de que os dispositivos servem tanto como roteadores e hosts ao mesmo tempo \cite{prasad2004ofdm}.
+
+
+%[O principal problema de segurança neste tipo de rede é criar relações confiáveis entre as chaves públicas criptográficas sem o auxílio de uma certificação confiável de terceiros. Além disso, há outros problemas de segurança específicos para redes ad hoc, por exemplo, o "ataque de exaustão de bateria" como uma forma especial de ataque de negação de serviço \cite{prasad2004ofdm}.]
+%[A tecnologia PAN, especialmente Bluetooth, é provavelmente a primeira rede comercial do mundo real onde os conceitos de rede ad hoc se encaixam muito bem e poderia ajudar a criar conectividade de rede robusta e flexível.]
+
+
 \subsection{Hardware - Tecnologias Associadas}
 
-\subsection{Redes \textit{Ad Hoc}}
-\label{redes_ad_hoc}
-
+Existem várias tecnologias \textit{standard} que fornecem conectividade sem fio em curtas distâncias. Neste artigo vamos destacar as seguente, \textbf{Bluetooth}, \textbf{IrDA}, \textbf{Zigbee}, \textbf{HomeRF} e \textbf{UWB}.
+Embora cada uma destas tecnologias tenha atingido aplicações e modelos de uso diferentes, o princípio por detrás de todas é a utilização de algum tipo de tecnologia de rádio subjacente, de forma a permitir a transmissão wireless de dados, fornecer suporte para a formação de redes e gerenciar vários dispositivos através de \textit{software} de alto nível \cite{prasad2004ofdm}.
 
 \section{Modelos de Arquitetura/\textit{standard}}
 

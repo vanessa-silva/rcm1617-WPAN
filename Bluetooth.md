@@ -33,11 +33,11 @@ Com o Bluetooth as conexões através de cabos tenderão a desaparecer, o que ev
 
 ##Classes e Versões
 
-O Bluetooth possibilita a comunicação entre dispositivos enquanto estão dentro do raio de alcance. Os dispositivos não precisam de estar em linha de vista um do outro, desde que a transmissão recebida tenha a potência suficiente para a comunicação via rádio funcionar. Para isso foi importante estudar-se as classes e verses da Tecnologia.
+O Bluetooth possibilita a comunicação entre dispositivos enquanto estão dentro do raio de alcance. Os dispositivos não precisam de estar em linha de vista um do outro, desde que a transmissão recebida tenha a potência suficiente para a comunicação via rádio funcionar.
 
-Existem atualmente 3 classes, numeradas de 1 a 3. A classe 1 é a mais potente, permitindo consumos até 100 mW com um alcance de 100 metros. A classe 2, por seu lado, possibilita cerca de 2.5 mW de potência máxima, com um alcance de 10 metros. Já a classe 3 permite 1 mW de potência, transmitindo numa distância de cerca de 1 metro.
+Existem atualmente 3 classes da tecnologia, numeradas de 1 a 3. A classe 1 é a mais potente, permitindo consumos até 100 mW com um alcance de 100 metros. A classe 2, por seu lado, possibilita cerca de 2.5 mW de potência máxima, com um alcance de 10 metros. Já a classe 3 permite 1 mW de potência, transmitindo numa distância de cerca de 1 metro.
 
-Versões também exisitam 3 até há pouco tempo, mas recentemente foi lançado o Bluetooth 4, que traz vantagens no consumo de energia, velocidade e segurança, entre outros. A versão 3 era a com uma maior taxa de transmissão - cerca de 24 Mbits/s -, enquanto que a versão 2 e 1.2 se ficavam pelos 3 e 1 Mbits por segundo, respetivamente.
+Versões também exisitam 3 até há pouco tempo, mas recentemente foi lançado o Bluetooth 4, que traz vantagens no consumo de energia, velocidade e segurança, entre outros. A versão 3 era até então a versão com maior taxa de transmissão - cerca de 24 Mbits/s -, enquanto que as versões 2 e 1.2 se ficavam pelos 3 e 1 Mbits por segundo, respetivamente.
 
 ##Bluetooth vs. Wi-Fi
 

@@ -2,7 +2,7 @@
 
 ##Definição
 
-O Bluetooth é um tipo de tecnologia WPAN sem fios, que estabelece uma comunicação de curta distância e baixo custo. Tem como objetivo o estabelecimento de conexão e troca de informação entre dispositivos, como telemóveis, computadores, impressoras, câmeras e até consolas de jogos, utilizando para isso uma frequência de rádio de curto alcance. Foi lançada em 1994 pela Ericsson, embora outras companhias como a Nokia, a IBM, a Intel e a Toshiba também se tenham juntado à empresa sueca em 1998, formando um grupo chamado Bluetooth SIG (Special Interest Group), com o intuito de desenvolver, promover e expandir a tecnologia. Nos dias de hoje, milhares de empresas já se juntaram ao grupo, entre elas estão nomes fortes como a Samsung,a Microsoft, a Motorola, a Dell, a HP, a Phillips, a Siemens ou a Texas.
+O Bluetooth, também conhecido por IEEE 802.15.1, é um tipo de tecnologia WPAN sem fios, que estabelece uma comunicação de curta distância e baixo custo. Tem como objetivo o estabelecimento de conexão e troca de informação entre dispositivos, como telemóveis, computadores, impressoras, câmeras e até consolas de jogos, utilizando para isso uma frequência de rádio de curto alcance. Foi lançada em 1994 pela Ericsson, embora outras companhias como a Nokia, a IBM, a Intel e a Toshiba também se tenham juntado à empresa sueca em 1998, formando um grupo chamado Bluetooth SIG (Special Interest Group), com o intuito de desenvolver, promover e expandir a tecnologia. Nos dias de hoje, milhares de empresas já se juntaram ao grupo, entre elas estão nomes fortes como a Samsung,a Microsoft, a Motorola, a Dell, a HP, a Phillips, a Siemens ou a Texas.
 
 ##Especificações
 
@@ -16,9 +16,22 @@ O sistema de saltos de frequência, em que o Bluetooth se baseia, define vários
 
 ##Aplicações
 
+Algumas das aplicações mais relevantes do Bluetooth são:
+
+* Controlo e comunicação entre telemóveis e auscultadores sem fios, ou sistemas de voz para carros
+* Comunicação sem fios entre PCs num espaço pequeno, onde uma banda pequena é necessária
+* Comunicação sem fios entre PCs e dispositivos de I/O, como ratos, teclados e impressoras
+* Substituição de dispositivos tradicionalmente com fios para equipamentos sem fios, como recetores GPS, equipamentos médicos, leitores de código de barras e dispositivos de controlo de tráfego
+* Controlo sem fios em consolas de jogos, como Wii e PlayStation
+* Acesso à Internet através de um telemóvel
+* Envio de fotos de uma câmera para um computador, para poupar memória
+* Comunicação entre dispositivos dentro de uma residência, para simples funcionamentos como acender as luzes ou abrir a porta
+
 ##Benefícios
 
-##Versões
+Com o Bluetooth as conexões através de cabos tenderão a desaparecer, o que evita o problema da interligação dos cabos de conexão, que muitas vezes não são compatíveis com certos equipamentos. A tecnologia direciona-se para um maior aproveitamento das capacidades de conectividade, podendo-se envolver todos os equipamentos de uma pequena área (fixos e móveis) para interagirem entre si. O consumo de cada transmissor Bluetooth é de aproximadamente 50mA, dentro do limite de 10 metros de distância, o que representa cerca de 3% do consumo total de um telemóvel, valor que é quase irrisório comparado com outras tecnologias sem fios. Este baixo consumo permite que os dispositivos venham já com a tecnologia de fabrico, sem comprometer a autonomia das baterias. Os developers do projeto depressa perceberam que muito mais seria possível fazer aproveitando a tecnologia do Bluetooth. Se transmitir informação entre um computador e uma impressora era uma realidade, também o poderia ser transmitir dados de um telemóvel para uma impressora, ou mesmo entre impressoras. E com o baixo custo de um chip Bluetooth (cerca de 5 euros) e o baixo consumo de energia da tecnologia, o número de aplicações e benefícios da tecnologia rapidamente se tornaram inimagináveis.
+
+##Classes e Versões
 
 ##Requisitos
 
@@ -30,5 +43,6 @@ http://etutorials.org/Mobile+devices/mobile+wireless+design/Part+One+Introductio
 https://pt.wikipedia.org/wiki/Bluetooth
 https://www.youtube.com/watch?v=IKAhKJjoa8w
 http://pt.slideshare.net/DilumBandara/wireless-personal-area-networks
-http://br.ccm.net/contents/822-wpan-redes-pessoais-sem-fios
+http://br.ccm.net/contents/822-wpan-redes-pessoais-
 https://pdfs.semanticscholar.org/1e45/1c35db078fba05cc9b6daf8c21592f98c388.pdf
+https://pt.wikipedia.org/wiki/Bluetooth

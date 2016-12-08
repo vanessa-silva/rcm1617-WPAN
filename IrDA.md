@@ -2,7 +2,7 @@
 
 ##Definição
 
-Infrared Data Association, também conhecido por IrDA, é uma organização internacional que cria e promove padrões de conexão de dados de infravermelho de baixo custo e interoperáveis. Foi criada em 1993 por cerca de 50 empresas e possui um conjunto de protcolos de suporte a uma ampla gama de aparelhos de computação e dispositivos de comunicação. Estes protocolos são tipicamente destinados a fornecer altas velocidades, comunicação de curto alcance em linha de vista e transferência ponto-a-ponto de dados sem fios. Os protocolos IrDA utilizam o IrDA DATA como mecanismo de entrega de dados e o IrDA CONTROL como mecanismo de controlo.
+Infrared Data Association, também conhecido por IrDA, é uma organização internacional que cria e promove padrões de conexão de dados de infravermelho de baixo custo e interoperáveis. Foi criada em 1993 por cerca de 50 empresas e possui um conjunto de protocolos de suporte a uma ampla gama de aparelhos de computação e dispositivos de comunicação. Estes protocolos são tipicamente destinados a fornecer altas velocidades, comunicação de curto alcance em linha de vista e transferência ponto-a-ponto de dados sem fios. Os protocolos IrDA utilizam o IrDA DATA como mecanismo de entrega de dados e o IrDA CONTROL como mecanismo de controlo.
 
 ##Motivação
 
@@ -10,7 +10,7 @@ Hoje em dia praticamente todas as pessoas possuem um dispositivo com suporte par
 
 ##Aplicações
 
-Dito isto, existem algumas áreas onde o infravermelho é frequentemente usado. O padrão IrDA CONTROL permite que os periféricos sem fio, como teclados, mouse, almofadas de jogos, joysticks e unidades apontadoras, interajam sem fio com um dispositivo host, muitas vezes um PC de mesa ou uma unidade de jogos. Um dispositivo host pode se comunicar com até oito periféricos simultaneamente. A taxa de transmissão de dados para IrDA CONTROL normalmente atinge um máximo de 75 Kbps, o que é facilmente rápido o suficiente para o tipo de dados que estão sendo transferidos por esses tipos de dispositivos.
+O padrão IrDA CONTROL permite que os dispositivos de hardware, como teclados, ratos, joysticks ou apontadores, interajam com um dispositivo host (que pode comunicar com um máximo de 8 dispositivos ao mesmo tempo) sem utilização de fios. A taxa de transmissão de dados para IrDA CONTROL normalmente atinge um máximo de 75 Kbps, rápido o suficiente para o tipo de dados que são transferidos por esses tipos de dispositivos.
 
 ##Especificações
 
@@ -23,7 +23,8 @@ Dito isto, existem algumas áreas onde o infravermelho é frequentemente usado. 
 
 ##Funcionamento
 
-O IrDA foi projetado para conexões ponto a ponto baratas, bidirecionais, de curto alcance e razoavelmente direcionais. Inicialmente até 115,2 kbps através de adições a uma porta serial RS232C, e até 4 Mbps. Eles usam retorno de banda base para zero modulação invertida. O esquema de 4 Mbps usa um esquema de modulação de posição de 4 pulsos de dois bits por impulso.
+O IrDA foi projetado para conexões ponto a ponto baratas, bidirecionais e de curto alcance.
+--Inicialmente até 115,2 Kbps através de adições a uma porta serial RS232C, e até 4 Mbps. Eles usam retorno de banda base para zero modulação invertida. O esquema de 4 Mbps usa um esquema de modulação de posição de 4 pulsos de dois bits por impulso.
 
 Controles remotos para TVs e similares são totalmente diferentes. Eles usam aproximadamente 40 kHz sinais e modulação de largura de pulso, com uma variedade de protocolos. Eles são personalizados para baixa velocidade, grande angular, uma forma, conexões de longo alcance. Estes não são compatíveis com IrDA. Você pode encontrar pacotes de transmissores receptores de uma peça para sinais remotos a baixo custo e dirigi-los de TTL. IrDA normalmente não pode fazer sinais de controle remoto de TV, e são de menor alcance, mas muitas vezes você pode falsificar os sinais em software. Conexões de infravermelho para teclados e similares não têm de seguir qualquer padrão, como o fabricante fornece ambas as extremidades da conexão.
 

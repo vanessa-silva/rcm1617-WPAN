@@ -11,6 +11,8 @@
 %
 %\makeglossaries
 
+\usepackage{multirow}
+
 \usepackage[pdftex]{graphicx}
 \graphicspath{{./Imagens/}}
 
@@ -51,7 +53,7 @@ Introdução aqui.
 %Uma rede de área pessoal sem fio (WPAN) é um sistema de comunicação de dados ad hoc sem fio que permite que vários dispositivos de dados independentes se comuniquem. 
 
 
-\section{Conceito, Motivação, Objetivos, Benefícios}
+\section{Conceito, Motivação, Objetivos}
 
 \subsection{Conceito}
 
@@ -60,14 +62,14 @@ Uma \textit{Wireless Personal Area Network} (WPAN) é uma rede de área pessoal 
 Além da conexão entre os dispositivos pessoais, que formam a bolha, WPANs devem fornecer ao utilizador uma conexão \textit{ad hoc} (\ref{redes_ad_hoc}) com os recursos e aplicações compatíveis que entram no seu POS \cite{prasad2004ofdm}.
 Esta permite que os dispositivos pessoas se comuniquem com outros dispositivos em que a faixa de comunicação interceta o seu POS.
 
-O paradigma das comunicações tradicionais destina-se a estabelecer ligações de comunicação entre dispositivos, enquanto que as WPANs destinam-se a estabelecer comunicações entre pessoas, (dispositivos pessoais habilitados para comunicação), e recursos funcionais/dados através de um meio sem fios (substituindo o tradicional "cabo").
+O paradigma das comunicações tradicionais destina-se a estabelecer ligações de comunicação entre dispositivos, enquanto que as WPANs destinam-se a estabelecer comunicações entre pessoas, (dispositivos pessoais habilitados para comunicação), e recursos funcionais/dados através de um meio sem fio (substituindo o tradicional "cabo").
 
-As \textit{Wireless Personal Area Networks} são projetadas para operarem na banda mundial ISM (\textit{Industrial}, \textit{Scientific} e \textit{Medical}) de 2,4 GHz. Esta banda proporciona disponibilidade geral em todo o mundo e adequação a soluções de rádio de baixo custo, baixo consumo de energia, curto alcance e não exige a necessidade de uma licença, usando uma técnica FHSS (\textit{Frequency Hopping Spread Spectrum}). Essa última é baseada na especificação do Bluetooth \ref{bluetooth}, no qual se tornou um padrão IEEE denominado de 802.15 WPANs. %[cite: OPTIMIZING THE TOPOLOGY OF BLUETOOTH WIRELESS PERSONAL AREA NETWORKS e WIRELESS PERSONAL AREA NETWORKS: AN OVERVIEW OF THE IEEE P802.15 WORKING GROUP]
+As \textit{Wireless Personal Area Networks} são projetadas para operarem na banda mundial ISM (\textit{Industrial}, \textit{Scientific} e \textit{Medical}) de 2,4 GHz. Esta banda proporciona disponibilidade geral em todo o mundo e adequação a soluções de rádio de baixo custo, baixo consumo de energia, curto alcance e não exige a necessidade de uma licença, usando uma técnica FHSS (\textit{Frequency Hopping Spread Spectrum}). Essa última é baseada na especificação do Bluetooth \ref{bluetooth}, no qual se tornou um padrão IEEE denominado de 802.15 WPANs \cite{marsan2002optimizing}, \cite{braley2000wireless}.
 
 
 \subsection{Motivação}
 
-A motivação para tais redes vem da necessidade da troca de dados não só em grandes distâncias (que é tradicionalmente referida como comunicações), mas também entre pessoas que estão em uma "conversação" em uma curta distância (normalmente até um limite de 10 metros), assim como da necessidade dessa troca de dados ser realizada em um meio sem fios.
+A motivação para tais redes vem da necessidade da troca de dados não só em grandes distâncias (que é tradicionalmente referida como comunicações), mas também entre pessoas que estão em uma "conversação" em uma curta distância (normalmente até um limite de 10 metros), assim como da necessidade dessa troca de dados ser realizada em um meio sem fio.
 
 
 \subsection{Objetivos}
@@ -83,7 +85,7 @@ Os principais objetivos das WPANs são \cite{prasad2004ofdm}:
  
 \end{itemize}
 
-\subsection{Benefícios}
+%\subsection{Benefícios}
 
 %Livro:  A conectividade ad hoc proporcionada pelas WPANs pode motivar o design dos próprios dispositivos de computação, bem como a distribuição das tarefas e capacidades de computação em diferentes dispositivos.
 
@@ -106,7 +108,7 @@ Por exemplo, um dado PDA, (\textit{Personal Digital Assistants}), encontra uma i
 
 \subsection{Redes \textit{Ad Hoc}} \label{redes_ad_hoc}
 
-Uma rede \textit{ad hoc} é um tipo de rede sem fio constituída por nós (ou estações) que cooperam entre si de forma a encaminharem pacotes na rede (determinam quando um nó (ou estação) pode transmitir e receber dados), sem a necessidade de uma infraestrutura. Cada nó (ou estação) pode comunicar-se diretamente com outro nó (ou estação). [DISTRIBUTED TOPOLOGY CONSTRUCTION OF BLUETOOTH WIRELESS PERSONAL AREA NETWORKS e Qualidade de Serviço em Redes 802.11] 
+Uma rede \textit{ad hoc} é um tipo de rede sem fio constituída por nós (ou estações) que cooperam entre si de forma a encaminharem pacotes na rede (determinam quando um nó (ou estação) pode transmitir e receber dados), sem a necessidade de uma infraestrutura. Cada nó (ou estação) pode comunicar-se diretamente com outro nó (ou estação) \cite{salonidis2005distributed}, \cite{rubinstein2002qualidade}. 
 Esta comunicação (de um nó A para um nó B) só pode ser estabelecida se o nó B estiver dentro do raio de ação (locais onde o sinal chega com clareza) de A ou então, se existir um ou mais nó entre A e B que possam encaminhar os dados.
 
 Em termos de roteamento, toda a rede é baseada na ideia de que os dispositivos funcionarem tanto como \textit{routes} e como \textit{hosts} \cite{prasad2004ofdm}.
@@ -115,17 +117,16 @@ O principal problema que se encontra neste tipo de redes é a conceção de rela
 Existem outros problemas associados, como por exemplo, o “ataque de exaustão de bateria” como uma forma especial de ataque de negação de um dado serviço \cite{prasad2004ofdm}.
 
 
-
 \subsection{Hardware - Tecnologias Associadas}
 
-Existem várias tecnologias \textit{standard} que fornecem conectividade sem fio em curtas distâncias. Neste artigo vamos destacar as seguente, \textbf{Bluetooth}, \textbf{IrDA}, \textbf{Zigbee}, \textbf{HomeRF} e \textbf{UWB}.
+Existem várias tecnologias \textit{standard} que fornecem conectividade sem fio em curtas distâncias. Neste artigo vamos destacar as seguente, \textbf{Bluetooth}, \textbf{IrDA}, \textbf{Zigbee}, \textbf{HomeRF} e \textbf{UWB}, onde analisamos algumas destas, neste artigo, na secção (\ref{arquiteturas}).
 Embora cada uma destas tecnologias tenha atingido aplicações e modelos de uso diferentes, o princípio por detrás de todas é a utilização de algum tipo de tecnologia de rádio subjacente, de forma a permitir a transmissão wireless de dados, fornecer suporte para a formação de redes e gerenciar vários dispositivos através de \textit{software} de alto nível \cite{prasad2004ofdm}.
 
-\section{Modelos de Arquitetura/\textit{standard}}
+\section{Modelos de Arquitetura/\textit{standard}} \label{arquiteturas}
 
 \subsection{Bluetooth} \label{bluetooth}
 
-O Bluetooth, também conhecido por IEEE 802.15.1, é um tipo de tecnologia WPAN sem fios, que estabelece uma comunicação de curta distância e baixo custo. 
+O Bluetooth, também conhecido por IEEE 802.15.1, é um tipo de tecnologia WPAN sem fio, que estabelece uma comunicação de curta distância e baixo custo. 
 Tem como objetivo o estabelecimento de conexões e troca de informação entre dispositivos, como telemóveis, computadores, impressoras, câmaras e até consolas de jogos, utilizando para isso uma frequência de rádio de curto alcance. 
 Foi lançado em 1994 pela Ericsson, embora outras companhias como a Nokia, a IBM, a Intel e a Toshiba também se tenham juntado à empresa sueca em 1998, formando um grupo chamado Bluetooth SIG (\textit{Special Interest Group}), com o intuito de desenvolver, promover e expandir esta tecnologia. 
 Nos dias de hoje, milhares de empresas já se juntaram ao grupo, entre elas estão nomes fortes como a Samsung, a Microsoft, a Motorola, a Dell, a HP, a Phillips, a Siemens e a Texas.
@@ -157,22 +158,24 @@ Algumas das especificações desta importante tecnologia são:
   \label{fig:noPonte}
 \end{figure}
 
-O Bluetooth baseasse numa camada física de saltos de frequência, que permite que dispositivos portáteis formem redes \textit{ad hoc} sem fio de curto alcance. 
+O Bluetooth baseasse numa camada física de saltos de frequência, que permite que dispositivos portáteis formem redes \textit{ad hoc} sem fio de curto alcance \cite{salonidis2005distributed}. 
 Os \textit{hosts} Bluetooth não são capazes de comunicar a menos que se tenham previamente descoberto uns aos outros, através da sincronização dos seus padrões de tempo e frequência. 
 Assim, mesmo que todos os nós estejam próximos uns dos outros, apenas os nós que estão sincronizados com o transmissor podem ouvir a transmissão.
 Para suportar comunicação \textit{any-to-any}, os nós devem ser sincronizados de modo a que os pares de nós, que se podem comunicar uns com os outros, formem um gráfico conectado.
 
-O sistema de saltos de frequência, em que o Bluetooth se baseia, define vários canais para comunicação, sendo que cada canal é baseado numa sequência de salto de frequência diferente. 
-Assim, um grupo de dispositivos que compartilham um mesmo canal é chamado de \textit{piconet}. 
+O sistema de saltos de frequência (FH-CDMA), em que o Bluetooth se baseia, define vários canais para comunicação, sendo que cada canal é baseado numa sequência de salto de frequência diferente \cite{salonidis2005distributed}. 
+Assim, um grupo de dispositivos que compartilham um mesmo canal, (que se conectam de forma \textit{ad hoc}), é chamado de \textit{piconet}. 
 
 Cada \textit{piconet} tem uma unidade \textbf{mestre} (\textit{master}) que seleciona uma sequência de salto de frequência para o \textit{piconet} e controla o acesso ao canal. 
-Os outros participantes do grupo, conhecidos como unidades \textbf{escravas} (\textit{slaves}), são sincronizados com a sequência de salto do \textit{piconet master}. 
+Os outros participantes do grupo, conhecidos como unidades \textbf{escravas} (\textit{slaves}), são sincronizados com a sequência de salto do \textit{piconet master} \cite{salonidis2005distributed}. 
 
-Dentro de um \textit{piconet}, o canal é compartilhado usando um \textit{slotted Time Division Duplex} (TDD), em que um mestre usa um protocolo de pesquisa para alocar faixas horárias para os nós escravos. O número máximo de escravos que podem ser simultaneamente ativos num \textit{piconet} é sete. 
+Dentro de um \textit{piconet}, o canal é compartilhado usando um \textit{slotted Time Division Duplex} (TDD), em que um mestre usa um protocolo de pesquisa para alocar faixas horárias para os nós escravos. O número máximo de escravos que podem ser simultaneamente ativos num \textit{piconet} é sete	.
 
 Quando os vários \textit{piconets} (lado esquerdo da figura (\ref{fig:topBluet})) são conectados, forma-se uma rede wireless chamada \textit{scatternet}, como ilustrado à direita da figura (\ref{fig:topBluet}).
-Isto é possível, pois cada \textit{piconet} utiliza uma sequência de salto diferente, o que faz com que múltiplos \textit{piconets} possam coexistir numa área comum. 
-Estes são então conectados através de uns nós especiais, chamados de nós \textbf{ponte}, que podem ser construídos entre dois nós mestre, como podemos ver na figura (\ref{fig:noPonte}), entre um nó mestre e um escravo ou entre dois nós escravos. 
+Isto é possível, pois cada \textit{piconet} utiliza uma sequência de salto diferente, o que faz com que múltiplos \textit{piconets} possam coexistir numa área comum \cite{salonidis2005distributed}, uma vez que esta diferença reduz a interferência mútua a um nível aceitável \cite{prasad2004ofdm}. 
+Estes são então conectados através de uns nós especiais, chamados de nós \textbf{ponte}, que podem ser construídos entre dois nós mestre, como podemos ver na figura (\ref{fig:noPonte}), entre um nó mestre e um escravo ou entre dois nós escravos \cite{salonidis2005distributed}.
+
+Cenário real deste funcionamento seria uma impressora e um PC equipados com Bluetooth. Quando o PC chega ao alcance da impressora, a impressora dá-se a conhecer ao PC para que, quando o usuário desejar imprimir um documento, os dois dispositivos possam iniciar imediatamente a transferência de dados. Enquanto isso, possivelmente, outros PCs, que terão chegado ao alcance destes dispositivos, se uniram à \textit{piconet} estabelecida para que eles também possam usar a impressora quando necessário.
 
 Dada uma coleção de dispositivos Bluetooth, é necessário um protocolo explícito de construção de topologia para formar \textit{piconets}, atribuir escravos a \textit{piconets} e conectar \textit{piconets} através de nós ponte, de modo que o \textit{scatternet} resultante fique conectado. Tal protocolo deve ser assíncrono, distribuído e pode começar com nós que não têm qualquer informação sobre o seu ambiente.
 
@@ -181,7 +184,7 @@ Dada uma coleção de dispositivos Bluetooth, é necessário um protocolo explí
 Com o Bluetooth as conexões através de cabos tenderão a desaparecer, o que evita o problema da interligação dos cabos de conexão, que muitas vezes não são compatíveis com certos equipamentos. 
 A tecnologia direciona-se para um maior aproveitamento das capacidades de conectividade, podendo-se envolver todos os equipamentos de uma pequena área (fixos e móveis) para interagirem entre si. 
 
-O consumo de cada transmissor Bluetooth é de aproximadamente 50 mA, dentro do limite de 10 metros, o que representa cerca de 3\% do consumo total de um telemóvel, valor que é quase irrisório comparado com outras tecnologias sem fios. 
+O consumo de cada transmissor Bluetooth é de aproximadamente 50 mA, dentro do limite de 10 metros, o que representa cerca de 3\% do consumo total de um telemóvel, valor que é quase irrisório comparado com outras tecnologias sem fio. 
 Este baixo consumo permite que os dispositivos venham já com a tecnologia de fábrica, sem comprometer a autonomia das baterias. 
 Os \textit{developers} do projeto depressa perceberam que muito mais seria possível fazer aproveitando a tecnologia do Bluetooth. 
 Se transmitir informação entre um computador e uma impressora era uma realidade, também o poderia ser transmitir dados de um telemóvel para uma impressora, ou mesmo entre impressoras. 
@@ -197,19 +200,113 @@ Versões também exisitam 3 até há pouco tempo, mas recentemente foi lançado 
 
 \subsubsection{Bluetooth vs. Wi-Fi}
 
-Resumidamente, embora o Bluetooth utilize a mesma banda de 2,45 GHz do 802.11b e do 802.11g, o Wi-Fi continua a ser uma melhor opção, já que uma rede Bluetooth é muito mais lenta e, para além de suportar poucos dispositivos, é ainda menos segura. O Wi-Fi, por sua vez, apesar de requerer mais configurações, é melhor para operar redes de alta-escala pelo simples facto de suportar conexões rápidas e seguras com melhor potência de transmissão e receção.
+Resumidamente, embora o Bluetooth utilize a mesma de 2,45 GHz do 802.11b e do 802.11g, o Wi-Fi continua a ser uma melhor opção, já que uma rede Bluetooth é muito mais lenta e, para além de suportar poucos dispositivos, é ainda menos segura. O Wi-Fi, por sua vez, apesar de requerer mais configurações, é melhor para operar redes de alta-escala pelo simples facto de suportar conexões rápidas e seguras com melhor potência de transmissão e receção.
 
-\subsection{IrDA}
+\subsection{Infravermelhos - IrDA}
 
-\subsection{IEEE 802.15.4 - Zigbee}
+\subsection{IEEE 802.15.4 - ZigBee}
 
-%Em março de 1999, o Comitê de Normas de Rede Local e Metropolitana IEEE 802 formou um novo Grupo de Trabalho para desenvolver padrões de comunicação para redes de área pessoal sem fio para dispositivos de computação portáteis e móveis. O novo grupo é designado Grupo de Trabalho do Projeto 802.15 para Redes Pessoais Sem Fio (WPANs). [cite: WIRELESS PERSONAL AREA NETWORKS: AN OVERVIEW OF THE IEEE P802.15 WORKING GROUP]
+O padrão de comunicação sem fio ZigBee baseia-se no padrão IEEE 802.15.4 LR-WPAN, e foi concebido de forma a possibilitar a interconexão de dispositivos sem fio simples (de frequência de rádio), que requerem baixa taxa de dados, de baixa bateria e de baixo custo \cite{kennedy2008review}, assim como, redes de eletrodomésticos, monitorização médica, controlo industrial e sensores ambientais. Este padrão resulta da aliança entre o IEEE e a ZigBee Alliance , em que o primeiro ficou responsável pela criação das duas camada mais baixas da pilha do protocolo ZigBee (camada \textbf{PHY} e \textbf{MAC}), e a segunda pelas camadas superiores (camada \textbf{Network} e \textbf{Application}) \cite{liang2006impact}.
+
+Numa rede ZigBee, cada nó pode desempenhar dois tipos papeis, segundo o IEEE. O papel de dispositivo de função completa (\textit{Full Function Device} (FFD)) ou o de dispositivo de função reduzida (\textit{Reduced Function Device} (RFD)), dependendo de suas capacidades.
+O FFD pode desempenhar três papeis específicos na rede, o papel de \textit{router} (ou coordenador PAN), (e consequentemente ter acesso a todos os outros dispositivos), o papel de coordenador ou de dispositivo final, podendo deste modo participar no roteamento da rede.
+Enquanto que os RFDs apenas pode desempenhar o papel de dispositivo final, podendo comunicar apenas com FFDs, (ao contrário dos FFDs que podem comunicar com RFDs ou FFDs) \cite{liang2006impact},\cite{sinem2004zigbee}.
+O coordenador é responsável por iniciar uma nova rede e, assim como os \textit{routers}, podem realizar o encaminhamento de dados, ao contrário dos dispositivos finais que não podem participar no encaminamento e têm de "confiar" nos seus \textit{routers} pai \cite{liang2006impact}.
+
+O ZigBee é então um padrão de comunicações sem fio baseado em CDMA/CA como vemos a seguir. 
+
+
+\subsubsection{Funcionamento}
+
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=0.45\textwidth]{Modelos_Topologias_ZigBee.png}
+  \caption{Modelos de topologias da tecnologia ZigBee \cite{sinem2004zigbee}.}
+  \label{fig:topZigBee}
+\end{figure}
+
+O esquema de funcionamento de uma rede ZigBee é a chave para se obter a eficiência de recursos pretendida (por exemplo, largura de banda e energia).
+
+Com base nas camadas PHY e MAC, ZigBee estabelece o \textit{framework} para as camadas \textit{Network} e \textit{Application} \cite{liang2006impact}.
+
+Na camada PHY, o IEEE 802.15.4 define um total de 27 canais, dos quais 16 apresentam uma taxa máxima de 250 kbps na banda ISM 2,4-2,4835 GHz (global), que utiliza modulação O-QPSK, 10 apresentam uma taxa máxima de 40 kbps na banda ISM 902 - 928 MHz (América), e 1 apresenta uma taxa máxima de 20 kbps na banda 868,0 - 868,6 MHz (Europa), em que estas últimas utilizam modulação BPSK.
+Esta camada é responsável por permitir a transmissão unidades de dados, através de ondas de rádio.
+Utiliza a modulação \textit{Direct Sequence Spread Spectrum} (DSSS) que inclui em cada bit de dados um padrão de redundância, (que permite, não só, que os dados sejam identificados como pertencentes a um determinado nó, como também facilita a deteção de erros), e os espalha pela largura de banda utilizada.
+Ao espalhar os dados em todas as frequências da banda, o sinal resultante assemelha-se a um ruído, tornando-se mais robusto a interferências. Após ser feita a DSSS, o sinal é modulado em uma portadora e transmitido \cite{liang2006impact}.
+Esta camada é também responsável por indicar a qualidade da conexão (através do valor do pacote \textit{Link Quality} que é calculado pelas camadas superiores de acordo com a relação sinal-ruído (SNR) e o valor do pacote \textit{Energy Detection} (ED)), detetar a potência dos canais (o ED representa em 8 bits a relação em dB da potência recebida nos canais) e indicar canais livres (determina se os canais estão ocupados através do \textit{Carrier Sense} do sinais em DSSS e/ou caso o valor de ED esteja acima do limite do canal). 
+
+Na camada MAC, utiliza-se o \textit{Carrier Sense Multiple Access with Collision Avoidance} (CSMA/CA) e suportam o modo \textit{beacon} e \textit{non-beacon} \cite{liang2006impact}.
+Esta camada é responsável pelo encapsulamento dos dados vindos das camadas superiores preparando-os para serem transmitidos.
+
+Em modo \textit{beacon} os \textit{routers} (FFD) transmitem periodicamente \textit{beacon frames}, que são pequenos pacotes que confirmam a sua presença na rede a outros dispositivos \cite{cirilo2014computaccao}, \cite{liang2006impact}, e todos o nó à exceção do coordenador podem permanecer inativos (\textit{sleep}) entre \textit{beacons} economizando energia.
+É utilizada a estrutura de \textit{superframe} que prove banda livre em algumas situações e proporciona baixa latência nas transmissões.
+Esta é limitada por \textit{beacon frames} a cada período de tempo pré-determinado e o tempo total será igualmente dividido em 16 \textit{slots} de tempo.
+Após o \textit{beacon}, é apresentado os tempos de acesso CAP (Contension Access Period), onde todos os dispositivos competem entre si utilizando CSMA-CA, e o tempo livre, CFP (Contension Free Period), que garante \textit{slots} de tempo para cada dispositivo. Após isto, o dispositivo entra em modo inativo, economizando energia.
+O CSMA-CA consiste em, quando um dispositivo pretende transmitir, primeiro ele "ouve" o canal durante um período de tempo pré-determinado, se o canal estiver livre o dispositivo pode transmitir, caso contrário o dispositivo faz um \textit{backoff} de um período de tempo, reiniciando o processo após esse tempo.
+
+Em modo \textit{non-beacon} é utilizado o \textit{unslotted} CSMA/CA que tem um tempo de espera aleatório, não dependente de \textit{slots} de tempo, aqui os \textit{routers} ZigBee normalmente têm seus recetores continuamente ativos, não permitindo economizar energia.
+Isto permite redes heterogéneas, nas quais alguns dispositivos recebem continuamente, enquanto outros transmitem apenas quando algum estímulo externo é detetado. 
+Um exemplo de uma rede heterogénea é um interruptor de luz sem fio, em que o nó ZigBee na lâmpada recebe constantemente, uma vez que é conectado à rede elétrica, enquanto que um interruptor de luz alimentado por bateria permaneceria inativo (\textit{sleep}) até que o interruptor é acionado, aqui acorda, emite um comando à lâmpada, recebe uma confirmação, e retorna ao estado inativo \cite{zigbee_online}.
+
+Esta rede ZigBee pode ter uma das três topologias seguintes (como pode ser observado na figura \ref{topZigBee}) \cite{sinem2004zigbee}:
+
+\begin{itemize}
+
+ \item \textit{Star} - a comunicação é estabelecida entre os dispositivos (FFDs e/ou RFDs) e um único controlador central (coordenador PAN). Depois que um FFD ser ativado pela primeira vez, ele pode estabelecer a sua própria rede tornando-se o coordenador PAN dela. Cada rede inicial escolhe um identificador PAN, que não é usado por nenhuma rede dentro da suas esfera de rádio. Isso permite que cada rede \textit{star} opere de forma independente. Esta topologia é ideal para automação residencial, computadores pessoais (PC), brinquedos e jogos.
+ 
+ \item \textit{Peer-to-peer} ou \textit{Mesh} - também existe um coordenador PAN, mas aqui qualquer dispositivo pode-se comunicar com qualquer outro, desde que estejam no alcance rádio um do outro. Esta topologia é ideal para aplicações tais como controle e monitorização industrial e redes de sensores sem fio. 
+ 
+ \item \textit{Cluster-tree} - é um caso especial de uma rede \textit{peer-to-peer}, aqui a maioria dos dispositivos são FFDs. Um RFD pode-se conectar a uma rede \textit{cluster-tree} como um nó de saída no fim de uma ramificação e qualquer um dos FFDs pode atuar como coordenador e fornecer serviços de sincronização para outros dispositivos e coordenadores, mas apenas um desses coordenadores é o coordenador PAN. Este forma o primeiro \textit{cluster} (sendo a cabeça de \textit{cluster} (CLH)) e escolhe um identificador PAN não utilizado. Um dispositivo pode solicitar a adesão à rede ao CLH e se este permitir que o dispositivo se junte, ele irá adiciona-lo como um dispositivo filho na sua lista de vizinho e este adicionará o CLH como seu pai na sua lista de vizinhos e começará a transmitir \textit{beacons} periódicos de modo que outros dispositivos possam aderir à rede nesse novo dispositivo. Uma vez satisfeitos os requisitos da rede, o coordenador PAN pode instruir um dispositivo a se tornar o CLH de um novo \textit{cluster} adjacente ao primeiro. 
+
+\end{itemize}
+
+
+\subsubsection{ZigBee vs. Bluetooth}
+
+ZigBee é um pouco semelhante ao Bluetooth, mas é mais simples, tem menor taxa de dados, pode ser implementado em redes \textit{mesh} maiores do que é possível com o Bluetooth e passa a maior parte do seu tempo dormindo, de forma a economizar energia.
+O alcance operacional do ZigBee é de 10-75m em comparação com 10m para Bluetooth (sem amplificador de potência).
+ZigBee fica abaixo de Bluetooth em termos de taxa de dados. A taxa de dados de ZigBee é 250kbps em 2.4GHz, 40kbps em 915MHz e 20kbps em 868MHz quando aquele de Bluetooth é 1Mbps.
+O protocolo Bluetooth é mais complexo, uma vez que é voltado para o tratamento de voz, imagens e transferências de arquivos em redes ad hoc. 
 
 
 \subsection{HomeRF}
 
 \subsection{UWB - Ultra-wideband}
 
+
+%tabela de comparações entre tecnologias (possivelmente servirá para reduzirmos texto)
+\begin{table}[h]	%[h]-faz com que a tabela fique neste mesmo sitio
+\centering
+\caption{Tabela de comparação entre as diferentes tecnologias apresentadas.}	%legenda
+\begin{tabular}{l|ccc}
+
+\textbf{Bluetooth} & \textbf{IrDA} & \textbf{ZigBee} \\
+\hline
+
+\textbf{Alcance} & 1-100 m & [irda] & 10-100 m \\
+\hline
+\textbf{Canais} & 79 & [irda] & 27 \\
+\hline
+\multirow{3}{*}{\textbf{Frequência}} & \multirow{3}{*}{2,45 GHz} & [irda] & 2,4-2,4835 GHz \\
+										 						 & [irda] & 868,0-868,6 MHz \\
+										  						 & [irda] & 902-928 MHz \\
+\hline
+\multirow{3}{*}{\textbf{Modulação}} & \multirow{3}{*}{FHSS} & [irda] & O-QPSK \\
+											 				& [irda] & BPSK \\
+											 				& [irda] & BPSK \\
+\hline
+\textbf{Taxa de Dados (max-min)} & 1 Mbps–24 Mbps & [irda] & 20 kpbs–250 kbps \\
+\hline
+\textbf{Canal de Acesso} & FH-CDMA & [irda] & \textit{Slotted}/\textit{Unslotted} CSMA/CA \\
+\hline
+\textbf{Topologia de Rede} & \textit{Piconets}, \textit{Scatternets} & [irda] & \textit{Star}, \textit{Mesh}, \textit{Cluster-tree} \\
+\hline
+\textbf{Dispositivos do Rede} & 8 & [irda] & 65535
+
+\end{tabular}
+\end{table}
+
+%%%%%%NOTA: Tabela ainda está com erros (falta preencher e corrigir uma formatação)
 
 \section{Conclusões}
 Conclusões aqui.

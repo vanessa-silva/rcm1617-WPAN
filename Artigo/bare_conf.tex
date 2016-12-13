@@ -129,9 +129,9 @@ Embora cada uma destas tecnologias tenha atingido aplicações e modelos de uso 
 O Bluetooth, também conhecido por IEEE 802.15.1, é um tipo de tecnologia WPAN sem fio, que estabelece uma comunicação de curta distância e baixo custo. 
 Tem como objetivo o estabelecimento de conexões e troca de informação entre dispositivos, como telemóveis, computadores, impressoras, câmaras e até consolas de jogos, utilizando para isso uma frequência de rádio de curto alcance. 
 Foi lançado em 1994 pela Ericsson, embora outras companhias como a Nokia, a IBM, a Intel e a Toshiba também se tenham juntado à empresa sueca em 1998, formando um grupo chamado Bluetooth SIG (\textit{Special Interest Group}), com o intuito de desenvolver, promover e expandir esta tecnologia. 
-Nos dias de hoje, milhares de empresas já se juntaram ao grupo, entre elas estão nomes fortes como a Samsung, a Microsoft, a Motorola, a Dell, a HP, a Phillips, a Siemens e a Texas.
+Nos dias de hoje, milhares de empresas já se juntaram ao grupo, entre elas estão nomes fortes como a Samsung, a Microsoft, a Motorola, a Dell, a HP, a Phillips, a Siemens e a Texas. % cite{https://pt.wikipedia.org/wiki/Bluetooth}
 
-Algumas das especificações desta importante tecnologia são:
+Algumas das especificações desta importante tecnologia são: %cite{http://grenoble.ime.usp.br/movel/monografia_bluetooth.pdf}
 
 \begin{itemize}
 
@@ -177,18 +177,18 @@ Estes são então conectados através de uns nós especiais, chamados de nós \t
 
 Cenário real deste funcionamento seria uma impressora e um PC equipados com Bluetooth. Quando o PC chega ao alcance da impressora, a impressora dá-se a conhecer ao PC para que, quando o usuário desejar imprimir um documento, os dois dispositivos possam iniciar imediatamente a transferência de dados. Enquanto isso, possivelmente, outros PCs, que terão chegado ao alcance destes dispositivos, se uniram à \textit{piconet} estabelecida para que eles também possam usar a impressora quando necessário.
 
-Dada uma coleção de dispositivos Bluetooth, é necessário um protocolo explícito de construção de topologia para formar \textit{piconets}, atribuir escravos a \textit{piconets} e conectar \textit{piconets} através de nós ponte, de modo que o \textit{scatternet} resultante fique conectado. Tal protocolo deve ser assíncrono, distribuído e pode começar com nós que não têm qualquer informação sobre o seu ambiente.
+Dada uma coleção de dispositivos Bluetooth, é necessário um protocolo explícito de construção de topologia para formar \textit{piconets}, atribuir escravos a \textit{piconets} e conectar \textit{piconets} através de nós ponte, de modo que o \textit{scatternet} resultante fique conectado. Tal protocolo deve ser assíncrono, distribuído e pode começar com nós que não têm qualquer informação sobre o seu ambiente. %cite{https://pdfs.semanticscholar.org/1e45/1c35db078fba05cc9b6daf8c21592f98c388.pdf - toda a parte de funcionamento}
 
 \subsubsection{Benefícios}
 
 Com o Bluetooth as conexões através de cabos tenderão a desaparecer, o que evita o problema da interligação dos cabos de conexão, que muitas vezes não são compatíveis com certos equipamentos. 
-A tecnologia direciona-se para um maior aproveitamento das capacidades de conectividade, podendo-se envolver todos os equipamentos de uma pequena área (fixos e móveis) para interagirem entre si. 
+A tecnologia direciona-se para um maior aproveitamento das capacidades de conectividade, podendo-se envolver todos os equipamentos de uma pequena área (fixos e móveis) para interagirem entre si. %cite{http://grenoble.ime.usp.br/movel/monografia_bluetooth.pdf}
 
 O consumo de cada transmissor Bluetooth é de aproximadamente 50 mA, dentro do limite de 10 metros, o que representa cerca de 3\% do consumo total de um telemóvel, valor que é quase irrisório comparado com outras tecnologias sem fio. 
 Este baixo consumo permite que os dispositivos venham já com a tecnologia de fábrica, sem comprometer a autonomia das baterias. 
 Os \textit{developers} do projeto depressa perceberam que muito mais seria possível fazer aproveitando a tecnologia do Bluetooth. 
 Se transmitir informação entre um computador e uma impressora era uma realidade, também o poderia ser transmitir dados de um telemóvel para uma impressora, ou mesmo entre impressoras. 
-E com o baixo custo de um chip Bluetooth (cerca de 5 euros) e o baixo consumo de energia da tecnologia. O número de aplicações e benefícios da tecnologia rapidamente se tornaram inimagináveis.
+E com o baixo custo de um chip Bluetooth (cerca de 5 euros) e o baixo consumo de energia da tecnologia. O número de aplicações e benefícios da tecnologia rapidamente se tornaram inimagináveis. %cite{http://grenoble.ime.usp.br/movel/monografia_bluetooth.pdf}
 
 \subsubsection{Classes e Versões}
 
@@ -196,13 +196,83 @@ O Bluetooth possibilita a comunicação entre dispositivos enquanto estão dentr
 
 Existem atualmente 3 classes da tecnologia, numeradas de 1 a 3. A classe 1 é a mais potente, permitindo consumos até 100 mW com um alcance de 100 metros. A classe 2, por seu lado, possibilita cerca de 2.5 mW de potência máxima, com um alcance de 10 metros. Já a classe 3 permite 1 mW de potência, transmitindo numa distância de cerca de 1 metro.
 
-Versões também exisitam 3 até há pouco tempo, mas recentemente foi lançado o Bluetooth 4, que traz vantagens no consumo de energia, velocidade e segurança, entre outros. A versão 3 era até então a versão com maior taxa de transmissão - cerca de 24 Mbits/s -, enquanto que as versões 2 e 1.2 se ficavam pelos 3 e 1 Mbits por segundo, respetivamente.
+Versões também exisitam 3 até há pouco tempo, mas recentemente foi lançado o Bluetooth 4, que traz vantagens no consumo de energia, velocidade e segurança, entre outros. A versão 3 era até então a versão com maior taxa de transmissão - cerca de 24 Mbits/s -, enquanto que as versões 2 e 1.2 se ficavam pelos 3 e 1 Mbits por segundo, respetivamente. %cite{https://pt.wikipedia.org/wiki/Bluetooth - toda a subsubsection} 
 
 \subsubsection{Bluetooth vs. Wi-Fi}
 
-Resumidamente, embora o Bluetooth utilize a mesma de 2,45 GHz do 802.11b e do 802.11g, o Wi-Fi continua a ser uma melhor opção, já que uma rede Bluetooth é muito mais lenta e, para além de suportar poucos dispositivos, é ainda menos segura. O Wi-Fi, por sua vez, apesar de requerer mais configurações, é melhor para operar redes de alta-escala pelo simples facto de suportar conexões rápidas e seguras com melhor potência de transmissão e receção.
+Resumidamente, embora o Bluetooth utilize a mesma de 2,45 GHz do 802.11b e do 802.11g, o Wi-Fi continua a ser uma melhor opção, já que uma rede Bluetooth é muito mais lenta e, para além de suportar poucos dispositivos, é ainda menos segura. O Wi-Fi, por sua vez, apesar de requerer mais configurações, é melhor para operar redes de alta-escala pelo simples facto de suportar conexões rápidas e seguras com melhor potência de transmissão e receção. %cite{http://www.diffen.com/difference/Bluetooth_vs_Wifi}
+
 
 \subsection{Infravermelhos - IrDA}
+
+\textit{Infrared Data Association}, também conhecido por IrDA, é uma organização internacional que cria e promove padrões de conexão de dados de infravermelho de baixo custo e interoperáveis.
+Foi criada em 1993 por cerca de 50 empresas e possui um conjunto de protocolos de suporte a uma ampla gama de aparelhos de computação e dispositivos de comunicação. 
+Estes protocolos são tipicamente destinados a fornecer altas velocidades, comunicação de curto alcance em linha de vista e transferência ponto-a-ponto de dados sem fios. 
+Os protocolos IrDA utilizam o IrDA DATA como mecanismo de entrega de dados e o IrDA CONTROL como mecanismo de controlo. %cite{http://www.ericlindsay.com/computer/irda.htm}
+
+A motivação original da IrDA visa essencialmente fornecer uma tecnologia que possa substituir a utilização de cabos, bem como de outros padrões PAN. 
+A ideia é que dois dispositivos possam comunicar simplesmente apontando-os um para o outro, o que tornaria a utilização de cabos completamente desnecessária. 
+Hoje em dia praticamente todas as pessoas possuem um dispositivo com suporte para comunicação por infravermelhos. 
+A IrDA estima que existam mais de 300 milhões de dispositivos, tornando a comunicação por infravermelhos uma das tecnologias sem fios mais difundidas pelo globo terrestre. %cite{http://etutorials.org/Mobile+devices/mobile+wireless+design/Part+One+Introduction+to+the+Mobile+and+Wireless+Landscape/Chapter+3+Wireless+Networks/Wireless+Personal+Area+Networks+WPANs/}
+
+Alguma especificações desta tecnologia são:
+
+\begin{itemize}
+
+ \item Alcance de comunicação de até 1 metro, embora uma distância de 2 metros muitas vezes pode ser alcançada.
+ \item Uma opção de baixa potência para comunicação de até 20 centímetros. Isso requer 10 vezes menos energia do que a implementação completa.
+ \item Comunicação bidirecional.
+ \item Transmissão de dados de 9600 bps para uma velocidade máxima de 4 Mbps.
+
+\end{itemize}
+
+\subsubsection{Protocolos requeridos}
+
+Uma pilha de protocolos IrDA é o conjunto de camadas de protocolos das comunicações infravermelhas ponto-a-ponto. 
+Os protocolos de comunicação tratam de várias funcionalidades, e por isso são geralmente partidos em camadas. 
+Cada uma destas camadas lida com um conjunto de responsabilidades e fornece recursos necessários para as camadas acima e abaixo.
+Quando se colocam camadas sobre outras camadas, obtém-se o que se chama de pilha de protocolos. % cite{http://www.staroceans.org/DC/HWBooks/USB%20Design%20By%20Example/chapter09/ir/overview.pdf}
+
+As camadas necessárias de uma pilha de protocolos IrDA são as seguintes:
+
+\begin{itemize}
+
+ \item \textit{Physical Layer}: especifica características óticas, codificação de dados e enquadramento para várias velocidades;
+ \item IrLAP (\textit{Link Access Protocol}): estabelece a conexão confiável básica;
+ \item IrLMP (\textit{Link Management Protocol}): multiplexa serviços e aplicativos na conexão LAP;
+ \item IAS (\textit{Information Access Service}): fornece "páginas amarelas" de serviços num dispositivo.
+
+\end{itemize}
+
+A utilização das camadas opcionais depende da aplicação em particular. Os protocolos opcionais são:
+
+\begin{itemize}
+
+ \item TinyTP (\textit{Tiny Transport Protocol}): adiciona controlo de fluxo por canal para manter as coisas em movimento sem problemas. Esta é uma função muito importante e é necessária em muitos casos;
+ \item IrOBEX (\textit{The Object Exchange Protocol}): fácil transferência de arquivos e outros objetos de dados;
+ \item IrCOMM: emulação de porta serial e paralela, permitindo que os aplicativos existentes que usam comunicações seriais e paralelas usem o IR sem alterações;
+ \item IrLAN (\textit{Local Area Network access}): permite o acesso IR LAN sem fios para \textit{laptops} e outros dispositivos.
+
+\end{itemize}
+
+% Imagem: http://i.imgur.com/c9Kotc3.png
+
+
+\subsubsection{Benefícios}
+
+Uma das principais vantagens da IrDA a partir da perspetiva de um fabricante de dispositivos é o seu baixo custo. 
+As portas de infravermelhos podem ser incorporadas num dispositivo por valores inferiores a 1 euro, o que representa um custo muito baixo para a implementação de comunicação sem fios num dispositivo, em comparação com outros padrões WPAN. 
+Para além disto, existem outros benefícios da tecnologia IrDA, como a maior segurança e independência face às ondas de rádio e o facto de os dispositivos serem leves, consumirem pouco e serem fáceis de usar. % cite{http://www.rfwireless-world.com/Terminology/IrDA-advantages-and-disadvantages.html}
+
+\subsubsection{Limitações}
+
+O uso de infravermelhos para transferência de dados é uma excelente ideia, em teoria. 
+No entanto, mesmo com esta ubiquidade, a tecnologia raramente é utilizada para satisfazer a sua intenção original, ou seja, a transferência de dados. 
+Isto porque, para que o IR funcione, os dispositivos de comunicação têm de estar em linha de vista, o que pode ser um problema em vários cenários. 
+Num ambiente de escritório, esta limitação não é prática para muitos periféricos, como impressoras ou \textit{scanners}, que não mantêm a obrigatoriedade de estarem em linha de vista. 
+Para além deste problema, o infravermelhos também peca pelo facto de os dispositivos não se poderem mover enquanto a transmissão está em progresso e pela ideia de que a maioria dos utilizadores não tem dois dispositivos com portas IR. 
+Enquanto quase todos os dispositivos portáteis tem suporte para IrDA, a maioria dos \textit{desktops} não possui esse mesmo suporte, o que limita a eficácia da tecnologia como protocolo de transferência de dados. % cite{http://etutorials.org/Mobile+devices/mobile+wireless+design/Part+One+Introduction+to+the+Mobile+and+Wireless+Landscape/Chapter+3+Wireless+Networks/Wireless+Personal+Area+Networks+WPANs/}
+
 
 \subsection{IEEE 802.15.4 - ZigBee}
 

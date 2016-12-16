@@ -54,8 +54,6 @@ O grupo ficou designado por \textit{Project 802.15 Working Group for Wireless Pe
 
 AS WPANs são particularmente aplicáveis em cenários que exigem baixa taxa de transferência de dados, alcance limitado, baixo consumo de energia e que os dispositivos sejam fisicamente pequenos e de baixo custo.
 
-Como as pessoas usam mais dispositivos eletrónicos em casa e no escritório, e com a proliferação de periféricos, cedo se percebeu o sucesso que seria a implementação de conectividade sem fios e que o mercado para estas redes se expandiria rapidamente.
-
 Neste artigo, vamos analisar o estado da arte das WPANs e algumas das tecnologias associadas, nomeadamente, Bluetooth, IrDA e ZigBee.
 Este artigo está organizado da seguinte forma.
 Primeiramente apresentamos o conceito das WPAN, principais motivações e objetivo, na Secção \ref{conc_mot_obj}.
@@ -202,9 +200,7 @@ A classe 1 é a mais potente, permitindo consumos até 100 mW com um alcance de 
 A classe 2, por seu lado, possibilita cerca de 2.5 mW de potência máxima, com um alcance de 10 metros. 
 Já a classe 3 permite 1 mW de potência, transmitindo numa distância de cerca de 1 metro \cite{bluetoothwiki}.
 
-%o que queres dizer aqui? exisitam???? 
-Versões também exisitam 3 até há pouco tempo, mas recentemente foi lançado o Bluetooth 4, que traz vantagens no consumo de energia, velocidade e segurança, entre outros. 
-A versão 3 era até então a versão com maior taxa de transmissão, cerca de 24 Mbps, enquanto que as versões 2 e 1.2 se ficavam pelos 3 e 1 Mbps, respetivamente \cite{bluetoothwiki}.
+Recentemente foi lançado o Bluetooth 4, que traz vantagens no consumo de energia, velocidade e segurança, entre outros, relativamente às versões mais antigas. A versão 3 era até então a versão com maior taxa de transmissão, cerca de 24 Mbps, enquanto que as versões 2 e 1.2 se ficavam pelos 3 e 1 Mbps, respetivamente \cite{bluetoothwiki}.
 
 %\subsubsection{Bluetooth vs. Wi-Fi} talves devessemos retirar esta secção já que nao falamos em mais lado nenhum do wifi e assim...
 
@@ -375,15 +371,16 @@ Esta rede ZigBee pode ter uma das três topologias seguintes (como pode ser obse
 
 
 \section{Conclusões} \label{conclusoes}
-%colocando coisas que tinha em cima para aqui:
-Com o Bluetooth as conexões através de cabos tenderão a desaparecer, o que evita o problema da interligação dos cabos de conexão, que muitas vezes não são compatíveis com certos equipamentos. 
-A tecnologia direciona-se para um maior aproveitamento das capacidades de conectividade, podendo-se envolver todos os equipamentos de uma pequena área (fixos e móveis) para interagirem entre si \cite{kobayashi2004tecnologia}.
 
-%e este:
-ZigBee é um pouco semelhante ao Bluetooth, mas é mais simples, tem menor taxa de dados, pode ser implementado em redes \textit{mesh} maiores do que é possível com o Bluetooth e passa a maior parte do seu tempo dormindo, de forma a economizar energia.
-O alcance operacional do ZigBee é de 10-75m em comparação com 10m para Bluetooth (sem amplificador de potência).
-ZigBee fica abaixo de Bluetooth em termos de taxa de dados. A taxa de dados de ZigBee é 250kbps em 2.4GHz, 40kbps em 915MHz e 20kbps em 868MHz quando aquele de Bluetooth é 1Mbps.
-O protocolo Bluetooth é mais complexo, uma vez que é voltado para o tratamento de voz, imagens e transferências de arquivos em redes ad hoc. 
+Como as pessoas usam cada vez mais dispositivos eletrónicos em casa e no trabalho, e com a evolução da tecnologia envolvente, há uma clara necessidade de alcançar conectividade sem fios, o que tem provocado uma expansão bastante rápida das WPANs.
+
+Dos três padrões WPAN estudados (Bluetooth, IrDA e ZigBee), o IrDA é o mais antigo e aquele que tem alcançado uma maior abrangência no mercado, com cerca de 300 milhões de dispositivos entregues aos consumidores. Ao mesmo tempo, é também o mais limitado, já que só permite comunicações até um máximo de 2 metros, exigindo ainda uma linha de vista entre os dois dispositivos.
+
+A especificação Bluetooth (que tem gerado maior interesse na indústria da tecnologia) aborda esses problemas usando o espectro de 2,4 GHz não licenciado para comunicação, o que viabiliza a comunicação através de barreiras físicas, bem como maiores faixas, tipicamente até cerca de 10 metros. O Bluetooth também conquistou muita atenção da indústria, depois de mais de 2.000 empresas terem aderido ao Bluetooth SIG. Com o Bluetooth, as conexões através de cabos tenderão a desaparecer, o que evita o problema da interligação dos cabos de conexão, que muitas vezes não são compatíveis com certos equipamentos. A tecnologia direciona-se para um maior aproveitamento das capacidades de conectividade, podendo-se envolver todos os equipamentos de uma pequena área (fixos e móveis) para interagirem entre si \cite{kobayashi2004tecnologia}. Outra área de interesse é o alcance crescente que estas tecnologias podem abordar. Inicialmente, o Bluetooth visava um espaço de operação pessoal de 10 metros. Agora, com amplificação de potência, a gama estendeu-se até 100 metros.
+
+ZigBee é um pouco semelhante ao Bluetooth, mas é mais simples, tem menor taxa de dados, pode ser implementado em redes \textit{mesh} maiores do que é possível com o Bluetooth e passa a maior parte do seu tempo a "dormir", de forma a economizar energia. O alcance operacional do ZigBee é de 10-75m em comparação com 10m para Bluetooth (sem amplificador de potência). No entanto, ZigBee perde para o Bluetooth em termos de taxa de dados, já que a taxa de dados no ZigBee é 250kbps em 2.4GHz, 40kbps em 915MHz e 20kbps em 868MHz enquanto que no Bluetooth é de 1Mbps. O protocolo Bluetooth é mais complexo, uma vez que é voltado para o tratamento de voz, imagens e transferências de arquivos em redes ad hoc. 
+
+Em suma, não há um líder claro. Em muitos aspetos, o IrDA não é concorrente do Bluetooth ou do ZigBee, pois tenta tratar de uma necessidade do mercado distinta. A tecnologia IrDA está incluído em quase todos os dispositivos móveis, fornecendo uma maneira rápida e fácil para a transferência de dados de curto alcance confiável. Com os seus baixos custos de implementação, muitos dispositivos de baixo custo continuarão a suportar o IrDA, enquanto dispositivos mais avançados com necessidades sem fios mais robustas implementarão Bluetooth ou ZigBee.
 
 \bibliography{ref}{}
 \bibliographystyle{IEEEtran}

@@ -138,7 +138,7 @@ Tem como objetivo o estabelecimento de conexões e troca de informação entre d
 Foi lançado em 1994 pela Ericsson, embora outras companhias como a Nokia, a IBM, a Intel e a Toshiba, formando um grupo chamado Bluetooth SIG (\textit{Special Interest Group}), com o intuito de desenvolver, promover e expandir esta tecnologia. 
 Nos dias de hoje, milhares de empresas já se juntaram ao grupo, entre elas estão nomes fortes como a Samsung, a Microsoft, entre outras \cite{bluetoothwiki}.
 
-Algumas das especificações desta importante tecnologia são \cite{kobayashi2004tecnologia}:
+Algumas das especificações desta tecnologia são \cite{kobayashi2004tecnologia}:
 
 \begin{itemize}
 
@@ -267,7 +267,7 @@ A utilização das camadas opcionais depende da aplicação em particular. Os pr
 
 \subsubsection{Benefícios}
 
-Uma das principais vantagens da IrDA a partir da perspetiva de um fabricante de dispositivos é o seu baixo custo. 
+Uma das principais vantagens da IrDA é o seu baixo custo. 
 As portas de infravermelhos podem ser incorporadas num dispositivo por valores inferiores a 1 euro, o que representa um custo muito baixo para a implementação de comunicação sem fios num dispositivo, em comparação com outros padrões WPAN. 
 Para além disto, proporcionam maior segurança e independência face às ondas de rádio e o facto de os dispositivos serem leves, consumirem pouco e serem fáceis de usar \cite{infaredadvdis}.
 
@@ -275,11 +275,10 @@ Para além disto, proporcionam maior segurança e independência face às ondas 
 \subsubsection{Limitações}
 
 O uso de IR para transferência de dados é uma excelente ideia, em teoria. 
-No entanto, mesmo com esta ubiquidade, a tecnologia raramente é utilizada para satisfazer a sua intenção original, ou seja, a transferência de dados. 
-Isto porque, para que o IR funcione, os dispositivos de comunicação têm de estar em linha de vista, o que pode ser um problema em vários cenários. 
-Num ambiente de escritório, esta limitação não é prática para muitos periféricos, como impressoras ou \textit{scanners}, que não mantêm a obrigatoriedade de estarem em linha de vista. 
+No entanto, a tecnologia raramente é utilizada para satisfazer a sua intenção original, ou seja, a transferência de dados. 
+Pois RI requer que os dispositivos estejam linha de vista, o que pode ser um problema em vários cenários.
 Para além deste problema, o IR também peca pelo facto de os dispositivos não se poderem mover enquanto a transmissão está em progresso e pela ideia de que a maioria dos utilizadores não tem dois dispositivos com portas IR. 
-Enquanto quase todos os dispositivos portáteis tem suporte para IrDA, a maioria dos \textit{desktops} não possui esse mesmo suporte, o que limita a eficácia da tecnologia como protocolo de transferência de dados \cite{wpanonline}.
+Enquanto quase todos os dispositivos portáteis tem suporte para IrDA, a maioria dos \textit{desktops} não, o que limita a eficácia da tecnologia como protocolo de transferência de dados \cite{wpanonline}.
 
 
 \subsection{IEEE 802.15.4 - ZigBee}
@@ -288,9 +287,9 @@ O padrão de comunicação sem fio ZigBee baseia-se no padrão IEEE 802.15.4 LR-
 
 Este padrão resulta da aliança entre o IEEE e a ZigBee Alliance , em que o primeiro ficou responsável pela criação das duas camada mais baixas da pilha do protocolo ZigBee (camada \textbf{PHY} e \textbf{MAC}), e a segunda pelas camadas superiores (camada \textbf{Network} e \textbf{Application}) \cite{liang2006impact}.
 
-Numa rede ZigBee, cada nó pode ser de dois tipos, segundo o IEEE, dispositivo de função completa (\textit{Full Function Device} (FFD)) ou dispositivo de função reduzida (\textit{Reduced Function Device} (RFD)), dependendo de suas capacidades.
-O primeiro pode desempenhar três papeis específicos na rede, o papel de \textit{router} (ou coordenador PAN), (e consequentemente ter acesso a todos os outros dispositivos), o papel de coordenador ou de dispositivo final.
-E os segundos, os RFDs, apenas podem desempenhar o papel de dispositivo final, podendo comunicar apenas com os FFDs, (ao contrário dos FFDs que podem comunicar com RFDs ou FFDs) \cite{liang2006impact},\cite{sinem2004zigbee}.
+Numa rede ZigBee, cada nó pode ser de dois tipos, segundo o IEEE, dispositivo de função completa (\textit{Full Function Device} (FFD)) ou dispositivo de função reduzida (\textit{Reduced Function Device} (RFD)).
+O primeiro pode desempenhar três papeis específicos na rede, o de \textit{router} (ou coordenador PAN), que têm acesso a todos os outros dispositivos, o papel de coordenador ou de dispositivo final.
+E os segundos, os RFDs, apenas podem desempenhar o papel de dispositivo final, podendo comunicar apenas com os FFDs, (ao contrário dos FFDs que podem comunicar com todos) \cite{liang2006impact},\cite{sinem2004zigbee}.
 O coordenador é responsável por iniciar uma nova rede e, assim como os \textit{routers}, podem realizar o encaminhamento de dados, ao contrário dos dispositivos finais que não podem participar no encaminamento e têm de "confiar" nos seus \textit{routers} pai \cite{liang2006impact}.
 
 
@@ -329,7 +328,7 @@ Em modo \textit{non-beacon} é utilizado o \textit{unslotted} CSMA/CA que tem um
 Isto permite redes heterogéneas, nas quais alguns dispositivos recebem continuamente, enquanto outros transmitem apenas quando algum estímulo externo é detetado. 
 Um exemplo de uma rede heterogénea é um interruptor de luz sem fio, em que o nó ZigBee na lâmpada recebe constantemente, uma vez que é conectado à rede elétrica, enquanto que um interruptor de luz alimentado por bateria permaneceria inativo (\textit{sleep}) até que o interruptor é acionado, aqui acorda, emite um comando à lâmpada, recebe uma confirmação, e retorna ao estado inativo \cite{zigbee_online}.
 
-Esta rede ZigBee pode ter uma das três topologias seguintes \cite{sinem2004zigbee}: %(como pode ser observado na figura \ref{topZigBee}) 
+ZigBee pode ter uma das três topologias seguintes \cite{sinem2004zigbee}: %(como pode ser observado na figura \ref{topZigBee}) 
 
 \begin{itemize}
 

@@ -149,19 +149,19 @@ Algumas das especificações desta importante tecnologia são \cite{kobayashi200
 
 \subsubsection{Funcionamento}
 
-\begin{figure}[!t]
-  \centering
-  \includegraphics[width=0.45\textwidth]{Esquema_Bluetooth.png}
-  \caption{Topologia da tecnologia Bluetooth \cite{blueesptec}.}
-  \label{fig:topBluet}
-\end{figure}
+%\begin{figure}[!t]
+ % \centering
+  %\includegraphics[width=0.45\textwidth]{Esquema_Bluetooth.png}
+  %\caption{Topologia da tecnologia Bluetooth \cite{blueesptec}.}
+  %\label{fig:topBluet}
+%\end{figure}
 
-\begin{figure}[!t]
-  \centering
-  \includegraphics[width=0.45\textwidth]{no_ponte.png}
-  \caption{Representação da conexão de três \textit{piconets} atavés de um nó ponte \cite{salonidis2005distributed}.}
-  \label{fig:noPonte}
-\end{figure}
+%\begin{figure}[!t]
+ % \centering
+ % \includegraphics[width=0.45\textwidth]{no_ponte.png}
+  %\caption{Representação da conexão de três \textit{piconets} atavés de um nó ponte \cite{salonidis2005distributed}.}
+  %\label{fig:noPonte}
+%\end{figure}
 
 O Bluetooth baseia-se numa camada física de saltos de frequência (FHSS), que permite que dispositivos portáteis formem redes \textit{ad hoc} sem fio de curto alcance \cite{salonidis2005distributed}. 
 Os \textit{hosts} Bluetooth não são capazes de comunicar a menos que se tenham previamente descoberto uns aos outros, através da sincronização dos seus padrões de tempo e frequência. 
@@ -176,9 +176,9 @@ Os outros participantes do grupo, conhecidos como unidades \textbf{escravas} (\t
 
 Dentro de um \textit{piconet}, o canal é compartilhado usando um \textit{slotted Time Division Duplex} (TDD), em que um \textit{master} usa um protocolo de pesquisa para alocar faixas horárias para os \textit{slaves}. O número máximo de \textit{slaves} que podem ser simultaneamente ativos num \textit{piconet} é sete.
 
-Quando os vários \textit{piconets} (lado esquerdo da figura (\ref{fig:topBluet})) são conectados, forma-se uma rede wireless chamada \textit{scatternet}, como ilustrado à direita da figura (\ref{fig:topBluet}).
+Quando os vários \textit{piconets} são conectados, forma-se uma rede wireless chamada \textit{scatternet}.
 Isto é possível, pois cada \textit{piconet} utiliza uma sequência de salto diferente, o que faz com que múltiplos \textit{piconets} possam coexistir numa área comum \cite{salonidis2005distributed}, uma vez que esta diferença reduz a interferência mútua a um nível aceitável \cite{prasad2004ofdm}. 
-Estes são então conectados através de uns nós especiais, chamados de nós ponte, que podem ser construídos entre dois \textit{masters}, como podemos ver na figura (\ref{fig:noPonte}), entre um \textit{master} e um \textit{slave} ou entre dois \textit{slaves} \cite{salonidis2005distributed}.
+Estes são então conectados através de uns nós especiais, chamados de nós ponte, que podem ser construídos entre dois \textit{masters}, entre um \textit{master} e um \textit{slave} ou entre dois \textit{slaves} \cite{salonidis2005distributed}.
 
 Cenário real deste funcionamento seria uma impressora e um PC equipados com Bluetooth. Quando o PC chega ao alcance da impressora, esta dá-se a conhecer para que, quando o usuário desejar imprimir um documento, os dois dispositivos possam iniciar imediatamente a transferência de dados. Enquanto isso, possivelmente, outros PCs, que terão chegado ao alcance destes dispositivos, se unirão à \textit{piconet} estabelecida para que também possam usar a impressora quando necessário.
 
@@ -291,12 +291,12 @@ O coordenador é responsável por iniciar uma nova rede e, assim como os \textit
 
 \subsubsection{Funcionamento}
 
-\begin{figure}[!t]
-  \centering
-  \includegraphics[width=0.45\textwidth]{Modelos_Topologias_ZigBee.png}
-  \caption{Modelos de topologias da tecnologia ZigBee \cite{sinem2004zigbee}.}
-  \label{fig:topZigBee}
-\end{figure}
+%\begin{figure}[!t]
+ % \centering
+ % \includegraphics[width=0.45\textwidth]{Modelos_Topologias_ZigBee.png}
+ % \caption{Modelos de topologias da tecnologia ZigBee \cite{sinem2004zigbee}.}
+ % \label{fig:topZigBee}
+%\end{figure}
 
 O esquema de funcionamento de uma rede ZigBee é a chave para se obter a eficiência de recursos pretendida (por exemplo, largura de banda e energia).
 
@@ -324,7 +324,7 @@ Em modo \textit{non-beacon} é utilizado o \textit{unslotted} CSMA/CA que tem um
 Isto permite redes heterogéneas, nas quais alguns dispositivos recebem continuamente, enquanto outros transmitem apenas quando algum estímulo externo é detetado. 
 Um exemplo de uma rede heterogénea é um interruptor de luz sem fio, em que o nó ZigBee na lâmpada recebe constantemente, uma vez que é conectado à rede elétrica, enquanto que um interruptor de luz alimentado por bateria permaneceria inativo (\textit{sleep}) até que o interruptor é acionado, aqui acorda, emite um comando à lâmpada, recebe uma confirmação, e retorna ao estado inativo \cite{zigbee_online}.
 
-Esta rede ZigBee pode ter uma das três topologias seguintes (como pode ser observado na figura \ref{topZigBee}) \cite{sinem2004zigbee}:
+Esta rede ZigBee pode ter uma das três topologias seguintes \cite{sinem2004zigbee}: %(como pode ser observado na figura \ref{topZigBee}) 
 
 \begin{itemize}
 
@@ -378,7 +378,7 @@ Dos três padrões WPAN estudados (Bluetooth, IrDA e ZigBee), o IrDA é o mais a
 
 A especificação Bluetooth (que tem gerado maior interesse na indústria da tecnologia) aborda esses problemas usando o espectro de 2,4 GHz não licenciado para comunicação, o que viabiliza a comunicação através de barreiras físicas, bem como maiores faixas, tipicamente até cerca de 10 metros. O Bluetooth também conquistou muita atenção da indústria, depois de mais de 2.000 empresas terem aderido ao Bluetooth SIG. Com o Bluetooth, as conexões através de cabos tenderão a desaparecer, o que evita o problema da interligação dos cabos de conexão, que muitas vezes não são compatíveis com certos equipamentos. A tecnologia direciona-se para um maior aproveitamento das capacidades de conectividade, podendo-se envolver todos os equipamentos de uma pequena área (fixos e móveis) para interagirem entre si \cite{kobayashi2004tecnologia}. Outra área de interesse é o alcance crescente que estas tecnologias podem abordar. Inicialmente, o Bluetooth visava um espaço de operação pessoal de 10 metros. Agora, com amplificação de potência, a gama estendeu-se até 100 metros.
 
-ZigBee é um pouco semelhante ao Bluetooth, mas é mais simples, tem menor taxa de dados, pode ser implementado em redes \textit{mesh} maiores do que é possível com o Bluetooth e passa a maior parte do seu tempo a "dormir", de forma a economizar energia. O alcance operacional do ZigBee é de 10-75m em comparação com 10m para Bluetooth (sem amplificador de potência). No entanto, ZigBee perde para o Bluetooth em termos de taxa de dados, já que a taxa de dados no ZigBee é 250kbps em 2.4GHz, 40kbps em 915MHz e 20kbps em 868MHz enquanto que no Bluetooth é de 1Mbps. O protocolo Bluetooth é mais complexo, uma vez que é voltado para o tratamento de voz, imagens e transferências de arquivos em redes ad hoc. 
+ZigBee é um pouco semelhante ao Bluetooth, mas é mais simples, tem menor taxa de dados, pode ser implementado em redes \textit{mesh} maiores do que é possível com o Bluetooth e passa a maior parte do seu tempo a "dormir", de forma a economizar energia. O alcance operacional do ZigBee é de 10-75m em comparação com 10m para Bluetooth (sem amplificador de potência). No entanto, ZigBee perde para o Bluetooth em termos de taxa de dados, já que a taxa de dados no ZigBee é 250kbps em 2.4GHz, 40kbps em 915MHz e 20kbps em 868MHz enquanto que no Bluetooth é de 1Mbps. O protocolo Bluetooth é mais complexo, uma vez que é voltado para o tratamento de voz, imagens e transferências de arquivos em redes \textit{ad hoc}. 
 
 Em suma, não há um líder claro. Em muitos aspetos, o IrDA não é concorrente do Bluetooth ou do ZigBee, pois tenta tratar de uma necessidade do mercado distinta. A tecnologia IrDA está incluído em quase todos os dispositivos móveis, fornecendo uma maneira rápida e fácil para a transferência de dados de curto alcance confiável. Com os seus baixos custos de implementação, muitos dispositivos de baixo custo continuarão a suportar o IrDA, enquanto dispositivos mais avançados com necessidades sem fios mais robustas implementarão Bluetooth ou ZigBee.
 
